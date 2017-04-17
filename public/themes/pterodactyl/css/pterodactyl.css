@@ -133,7 +133,6 @@ td.has-progress {
 
 .no-margin {
     margin: 0 !important;
-    color: white;
 }
 
 li.select2-results__option--highlighted[aria-selected="false"] > .user-block > .username > a {
@@ -163,7 +162,7 @@ span[aria-labelledby="select2-pUserId-container"] {
 }
 
 .callout-slim a {
-    color: #fff !important;
+    color: #555 !important;
 }
 
 .callout.callout-info.callout-slim {

@@ -46,7 +46,7 @@
             </div>
             <div class="box-body">
                 @if (Version::isLatestPanel())
-                    You are running Panel version <code>{{ Version::getCurrentPanel() }}</code>. Your panel is up-to-date!
+                    You are running Pterodactyl Panel version <code>{{ Version::getCurrentPanel() }}</code>. Your panel is up-to-date!
                 @else
                     Your panel is <strong>not up-to-date!</strong> The latest version is <a href="https://github.com/Pterodactyl/Panel/releases/v{{ Version::getPanel() }}" target="_blank"><code>{{ Version::getPanel() }}</code></a> and you are currently running version <code>{{ Version::getCurrentPanel() }}</code>.
                 @endif
@@ -56,16 +56,17 @@
 </div>
 <div class="row">
     <div class="col-xs-6 col-sm-3 text-center">
-        <a href="https://discord.gg/5DmzrvR"><button class="btn btn-warning" style="width:100%;"><i class="fa fa-fw fa-support"></i> Get Help <small>(via Discord)</small></button></a>
+        <a href="{{ Version::getDiscord() }}"><button class="btn btn-warning" style="width:100%;"><i class="fa fa-fw fa-support"></i> Get Help <small>(via Discord)</small></button></a>
     </div>
     <div class="col-xs-6 col-sm-3 text-center">
-        <a href="https://wiki.digitalhazards.net"><button class="btn btn-primary" style="width:100%;"><i class="fa fa-fw fa-link"></i>DH Wiki</button></a>
+        <a href="https://docs.pterodactyl.io"><button class="btn btn-primary" style="width:100%;"><i class="fa fa-fw fa-link"></i> Documentation</button></a>
+    </div>
+    <div class="clearfix visible-xs-block">&nbsp;</div>
+    <div class="col-xs-6 col-sm-3 text-center">
+        <a href="https://github.com/Pterodactyl/Panel"><button class="btn btn-primary" style="width:100%;"><i class="fa fa-fw fa-support"></i> Github</button></a>
     </div>
     <div class="col-xs-6 col-sm-3 text-center">
-        <a href="https://github.com/thefonix"><button class="btn btn-primary" style="width:100%;"><i class="fa fa-fw fa-support"></i> Github</button></a>
-    </div>
-    <div class="col-xs-6 col-sm-3 text-center">
-        <a href="http://donate.digitalhazards.net"><button class="btn btn-success" style="width:100%;"><i class="fa fa-fw fa-money"></i> Support the Network</button></a>
+        <a href="https://patreon.com/pterry"><button class="btn btn-success" style="width:100%;"><i class="fa fa-fw fa-money"></i> Support the Project</button></a>
     </div>
 </div>
 @endsection

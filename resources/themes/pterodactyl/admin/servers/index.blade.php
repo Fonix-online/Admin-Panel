@@ -39,8 +39,8 @@
                 <h3 class="box-title">Server List</h3>
                 <div class="box-tools">
                     <form action="{{ route('admin.servers') }}" method="GET">
-                        <div class="input-group input-group-sm" style="width: 300px;">
-                            <input type="text" name="query" class="form-control pull-right" value="{{ request()->input('query') }}" placeholder="Search Servers">
+                        <div class="input-group input-group-sm">
+                            <input type="text" name="query" class="form-control pull-right" style="width:30%;" value="{{ request()->input('query') }}" placeholder="Search Servers">
                             <div class="input-group-btn">
                                 <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
                                 <a href="{{ route('admin.servers.new') }}"><button type="button" class="btn btn-sm btn-primary" style="border-radius: 0 3px 3px 0;margin-left:-1px;">Create New</button></a>
@@ -70,10 +70,8 @@
                                     <code>{{ $server->allocation->alias }}:{{ $server->allocation->port }}</code>
                                 </td>
                                 <td class="text-center">
-                                    @if($server->suspended && ! $server->trashed())
+                                    @if($server->suspended)
                                         <span class="label bg-maroon">Suspended</span>
-                                    @elseif($server->trashed())
-                                        <span class="label label-danger">Pending Deletion</span>
                                     @elseif(! $server->installed)
                                         <span class="label label-warning">Installing</span>
                                     @else
@@ -85,9 +83,11 @@
                     </tbody>
                 </table>
             </div>
-            <div class="box-footer with-border">
-                <div class="col-md-12 text-center">{!! $servers->render() !!}</div>
-            </div>
+            @if($servers->hasPages())
+                <div class="box-footer with-border">
+                    <div class="col-md-12 text-center">{!! $servers->render() !!}</div>
+                </div>
+            @endif
         </div>
     </div>
 </div>

@@ -22,7 +22,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Digital Hazards - Panel</title>
+        <title>{{ Settings::get('company', 'Pterodactyl') }} - @yield('title')</title>
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
         <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
@@ -50,11 +50,11 @@
     <body class="hold-transition login-page">
         <div class="login-box">
             <div class="login-logo">
-                Digital Hazards
+                {{ Settings::get('company', 'Pterodactyl') }}
             </div>
             @yield('content')
             <p class="small text-muted">
-                Copyright &copy; 2015 - {{ date('Y') }} <a href="https://fonix.online">Fonix</a>.<br />
+                Copyright &copy; 2015 - {{ date('Y') }} <a href="https://pterodactyl.io/" target="_blank">Pterodactyl Software</a>.<br />
             </p>
         </div>
         {!! Theme::js('vendor/jquery/jquery.min.js') !!}

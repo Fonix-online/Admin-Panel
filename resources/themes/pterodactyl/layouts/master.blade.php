@@ -22,7 +22,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Digital Hazards - Panel</title>
+        <title>{{ Settings::get('company', 'Pterodactyl') }} - @yield('title')</title>
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <meta name="_token" content="{{ csrf_token() }}">
 
@@ -34,6 +34,8 @@
         <link rel="shortcut icon" href="/favicons/favicon.ico">
         <meta name="msapplication-config" content="/favicons/browserconfig.xml">
         <meta name="theme-color" content="#367fa9">
+
+        @include('layouts.scripts')
 
         @section('scripts')
             {!! Theme::css('vendor/bootstrap/bootstrap.min.css') !!}
@@ -73,18 +75,15 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" data-action="control-sidebar" data-toggle="tooltip" data-placement="bottom" title="{{ @trans('strings.servers') }}"><i class="fa fa-server" style="margin-top:4px;padding-bottom:2px;"></i></a>
+                                <a href="#" data-action="control-sidebar" data-toggle="tooltip" data-placement="bottom" title="{{ @trans('strings.servers') }}"><i class="fa fa-server"></i></a>
                             </li>
                             @if(Auth::user()->isRootAdmin())
                                 <li>
-                                    <li><a href="{{ route('admin.index') }}" data-toggle="tooltip" data-placement="bottom" title="{{ @trans('strings.admin_cp') }}"><i class="fa fa-gears" style="margin-top:4px;padding-bottom:2px;"></i></a></li>
+                                    <li><a href="{{ route('admin.index') }}" data-toggle="tooltip" data-placement="bottom" title="{{ @trans('strings.admin_cp') }}"><i class="fa fa-gears"></i></a></li>
                                 </li>
                             @endif
                             <li>
-                                <li><a href="mailto:fonix@digitalhazards.net" data-toggle="tooltip" data-placement="bottom" title="Contact Developer"><i class="fa fa-question" style="margin-top:4px;padding-bottom:2px;"></i></a></li>
-                            </li>
-                            <li>
-                                <li><a href="{{ route('auth.logout') }}" data-toggle="tooltip" data-placement="bottom" title="{{ @trans('strings.logout') }}"><i class="fa fa-power-off" style="margin-top:4px;padding-bottom:2px;"></i></a></li>
+                                <li><a href="{{ route('auth.logout') }}" data-toggle="tooltip" data-placement="bottom" title="{{ @trans('strings.logout') }}"><i class="fa fa-power-off"></i></a></li>
                             </li>
                         </ul>
                     </div>
@@ -117,6 +116,12 @@
                                 <i class="fa fa-code"></i> <span>@lang('navigation.account.api_access')</span>
                             </a>
                         </li>
+                        <li class="{{ Route::currentRouteName() !== 'index' ?: 'active' }}">
+                            <a href="{{ route('index')}}">
+                                <i class="fa fa-server"></i> <span>@lang('navigation.account.my_servers')</span>
+                            </a>
+                        </li>
+				<li class="header">EXTERNAL TOOLS</li>
                         <li>
                             <a href="http://solder.digitalhazards.net">
                                 <i class="fa fa-first-order"></i> <span>Solder</span>
@@ -132,37 +137,27 @@
                                 <i class="fa fa-info-circle"></i> <span>Wiki</span>
                             </a>
                         </li>
-                        <li class="{{ Route::currentRouteName() !== 'index' ?: 'active' }}">
-                            <a href="{{ route('index')}}">
-                                <i class="fa fa-server"></i> <span>@lang('navigation.account.my_servers')</span>
-                            </a>
-                        </li>
                         @if (isset($server->name) && isset($node->name))
                             <li class="header">@lang('navigation.server.header')</li>
                             <li class="{{ Route::currentRouteName() !== 'server.index' ?: 'active' }}">
                                 <a href="{{ route('server.index', $server->uuidShort) }}">
                                     <i class="fa fa-terminal"></i> <span>@lang('navigation.server.console')</span>
+                                    <span class="pull-right-container muted muted-hover" href="{{ route('server.console', $server->uuidShort) }}" id="console-popout">
+                                        <span class="label label-default pull-right" style="padding: 3px 5px 2px 5px;">
+                                            <i class="fa fa-external-link"></i>
+                                        </span>
+                                    </span>
                                 </a>
                             </li>
                             @can('list-files', $server)
-                                <li class="treeview
-                                    @if(in_array(Route::currentRouteName(), ['server.files.index', 'server.files.edit', 'server.files.add']))
-                                        active
+                                <li
+                                    @if(starts_with(Route::currentRouteName(), 'server.files'))
+                                        class="active"
                                     @endif
-                                ">
-                                    <a href="#">
-                                        <i class="fa fa-files-o"></i>
-                                        <span>@lang('navigation.server.file_management')</span>
-                                        <span class="pull-right-container">
-                                            <i class="fa fa-angle-left pull-right"></i>
-                                        </span>
+                                >
+                                    <a href="{{ route('server.files.index', $server->uuidShort) }}">
+                                        <i class="fa fa-files-o"></i> <span>@lang('navigation.server.file_management')</span>
                                     </a>
-                                    <ul class="treeview-menu">
-                                        <li class="{{ (Route::currentRouteName() !== 'server.files.index' && Route::currentRouteName() !== 'server.files.edit') ?: 'active' }}"><a href="{{ route('server.files.index', $server->uuidShort) }}"><i class="fa fa-angle-right"></i> @lang('navigation.server.file_browser')</a></li>
-                                        @can('create-files', $server)
-                                            <li class="{{ Route::currentRouteName() !== 'server.files.add' ?: 'active' }}"><a href="{{ route('server.files.add', $server->uuidShort) }}"><i class="fa fa-angle-right"></i> @lang('navigation.server.create_file')</a></li>
-                                        @endcan
-                                    </ul>
                                 </li>
                             @endcan
                             @can('list-subusers', $server)
@@ -172,7 +167,7 @@
                                     @endif
                                 >
                                     <a href="{{ route('server.subusers', $server->uuidShort)}}">
-                                        <i class="fa fa-users"></i> <span>Subusers</span>
+                                        <i class="fa fa-users"></i> <span>@lang('navigation.server.subusers')</span>
                                     </a>
                                 </li>
                             @endcan
@@ -185,7 +180,7 @@
                                     <a href="{{ route('server.tasks', $server->uuidShort)}}">
                                         <i class="fa fa-clock-o"></i> <span>@lang('navigation.server.task_management')</span>
                                         <span class="pull-right-container">
-                                            <span class="label label-primary pull-right">{{ \Pterodactyl\Models\Task::select('id')->where('server', $server->id)->where('active', 1)->count() }}</span>
+                                            <span class="label label-primary pull-right">{{ \Pterodactyl\Models\Task::select('id')->where('server_id', $server->id)->where('active', 1)->count() }}</span>
                                         </span>
                                     </a>
                                 </li>
@@ -252,7 +247,7 @@
                     @yield('content')
                 </section>
             </div>
-            <footer class="main-footer">
+<footer class="main-footer">
                 <div class="pull-right hidden-xs small text-gray">
                     Panel Version:<strong> v</strong>{{ config('app.version') }} | DH Status: Connected
                 </div>
@@ -261,7 +256,7 @@
             <aside class="control-sidebar control-sidebar-dark">
                 <div class="tab-content">
                     <ul class="control-sidebar-menu">
-                        @foreach (Auth::user()->serverAccessCollection(null, []) as $s)
+                        @foreach (Auth::user()->access(null)->get() as $s)
                             <li>
                                 <a
                                     @if(isset($server) && isset($node))
@@ -288,6 +283,9 @@
             <div class="control-sidebar-bg"></div>
         </div>
         @section('footer-scripts')
+            {!! Theme::js('vendor/terminal/keyboard.polyfill.js') !!}
+            <script>keyboardeventKeyPolyfill.polyfill();</script>
+
             {!! Theme::js('js/laroute.js') !!}
             {!! Theme::js('vendor/jquery/jquery.min.js') !!}
             {!! Theme::js('vendor/sweetalert/sweetalert.min.js') !!}
