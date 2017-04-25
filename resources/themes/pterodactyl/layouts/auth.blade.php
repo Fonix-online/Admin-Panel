@@ -54,8 +54,7 @@
             </div>
             @yield('content')
             <p class="small text-muted">
-              Copyright &copy; 2015 - {{ date('Y') }} <a href="https://fonix.online">Fonix</a>.
-            </p>
+              Copyright &copy; 2015 - {{ date('Y') }} <a href="https://fonix.online">Fonix</a>.            </p>
         </div>
         {!! Theme::js('vendor/jquery/jquery.min.js') !!}
         {!! Theme::js('vendor/bootstrap/bootstrap.min.js') !!}
