@@ -919,11 +919,11 @@ a:hover, a:active, a:focus {
 
 .control-sidebar-light .nav-tabs.control-sidebar-tabs>li.active>a, .control-sidebar-light .nav-tabs.control-sidebar-tabs>li.active>a:hover, .control-sidebar-light .nav-tabs.control-sidebar-tabs>li.active>a:focus, .control-sidebar-light .nav-tabs.control-sidebar-tabs>li.active>a:active {
 	background: #f9fafc;
-	color: #111
+	color: #01060B
 }
 
 .control-sidebar-light .control-sidebar-heading, .control-sidebar-light .control-sidebar-subheading {
-	color: #111
+	color: #01060B
 }
 
 .control-sidebar-light .control-sidebar-menu {
@@ -4599,7 +4599,7 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 .bg-black {
-	background-color: #111 !important
+	background-color: #01060B !important
 }
 
 .bg-red, .callout.callout-danger, .alert-danger, .alert-error, .label-danger, .modal-danger .modal-body {
@@ -4745,7 +4745,7 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 .text-black {
-	color: #111 !important
+	color: #01060B !important
 }
 
 .text-light-blue {
@@ -4941,12 +4941,12 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 .bg-black-gradient {
-	background: #111 !important;
-	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #111), color-stop(1, #2b2b2b)) !important;
-	background: -ms-linear-gradient(bottom, #111, #2b2b2b) !important;
-	background: -moz-linear-gradient(center bottom, #111 0, #2b2b2b 100%) !important;
-	background: -o-linear-gradient(#2b2b2b, #111) !important;
-	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#2b2b2b', endColorstr='#111111', GradientType=0) !important;
+	background: #01060B !important;
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #01060B), color-stop(1, #2b2b2b)) !important;
+	background: -ms-linear-gradient(bottom, #01060B, #2b2b2b) !important;
+	background: -moz-linear-gradient(center bottom, #01060B 0, #2b2b2b 100%) !important;
+	background: -o-linear-gradient(#2b2b2b, #01060B) !important;
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#2b2b2b', endColorstr='#01060B111', GradientType=0) !important;
 	color: #fff
 }
 
