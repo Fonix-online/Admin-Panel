@@ -457,7 +457,7 @@ a:hover, a:active, a:focus {
 
 .sidebar {
 	padding-bottom: 10px;
-	background-image: url(https://digitalhazards.net/assets/res/tile.jpg);
+	background-color: rgba(15, 15, 15, 0.7);
 }
 
 .sidebar-form input:focus {
