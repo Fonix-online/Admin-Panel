@@ -94,7 +94,7 @@ body {
 }
 
 .main-footer {
-	background: #222;
+	background: rgba(15, 15, 15, 0.7);
 	padding: 15px;
 	color: #fff;
 	border-top: 1px solid #d2d6de
@@ -350,7 +350,7 @@ a:hover, a:active, a:focus {
 		top: 0;
 		right: 0;
 		float: none;
-		background: #222;
+		background: rgba(15, 15, 15, 0.7);
 		padding-left: 15px
 	}
 	.content-header>.breadcrumb li:before {
@@ -456,7 +456,8 @@ a:hover, a:active, a:focus {
 }
 
 .sidebar {
-	padding-bottom: 10px
+	padding-bottom: 10px;
+	background-image: url(https://digitalhazards.net/assets/res/tile.jpg);
 }
 
 .sidebar-form input:focus {
@@ -848,7 +849,7 @@ a:hover, a:active, a:focus {
 }
 
 .control-sidebar-dark, .control-sidebar-dark+.control-sidebar-bg {
-	background: #333
+	background: rgba(15, 15, 15, 0.7)
 }
 
 .control-sidebar-dark .nav-tabs.control-sidebar-tabs {
@@ -874,7 +875,7 @@ a:hover, a:active, a:focus {
 }
 
 .control-sidebar-dark .nav-tabs.control-sidebar-tabs>li.active>a, .control-sidebar-dark .nav-tabs.control-sidebar-tabs>li.active>a:hover, .control-sidebar-dark .nav-tabs.control-sidebar-tabs>li.active>a:focus, .control-sidebar-dark .nav-tabs.control-sidebar-tabs>li.active>a:active {
-	background: #222;
+	background: rgba(15, 15, 15, 0.7);
 	color: #fff
 }
 
@@ -953,7 +954,7 @@ a:hover, a:active, a:focus {
 
 .dropdown-menu>li>a:hover {
 	background-color: #e1e3e9;
-	color: #333
+	color: rgba(15, 15, 15, 0.7)
 }
 
 .dropdown-menu>.divider {
@@ -976,7 +977,7 @@ a:hover, a:active, a:focus {
 	border-top-right-radius: 4px;
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
-	background-color: #333fff;
+	background-color: rgba(15, 15, 15, 0.7)fff;
 	padding: 7px 10px;
 	border-bottom: 1px solid #444;
 	color: #fff444;
@@ -989,7 +990,7 @@ a:hover, a:active, a:focus {
 	border-bottom-right-radius: 4px;
 	border-bottom-left-radius: 4px;
 	font-size: 12px;
-	background-color: #333;
+	background-color: rgba(15, 15, 15, 0.7);
 	padding: 7px 10px;
 	border-bottom: 1px solid #eeeeee;
 	color: #fff !important;
@@ -1346,7 +1347,7 @@ a:hover, a:active, a:focus {
 .input-group .input-group-addon {
 	border-radius: 0;
 	border-color: #d2d6de;
-	background-color: #333
+	background-color: rgba(15, 15, 15, 0.7)
 }
 
 .btn-group-vertical .btn.btn-flat:first-of-type, .btn-group-vertical .btn.btn-flat:last-of-type {
@@ -1578,7 +1579,7 @@ a:hover, a:active, a:focus {
 .box {
 	position: relative;
 	border-radius: 3px;
-	background: #222;
+	background: rgba(15, 15, 15, 0.7);
 	border-top: 3px solid #00A8ff;
 	margin-bottom: 20px;
 	width: 100%;
@@ -1746,7 +1747,7 @@ a:hover, a:active, a:focus {
 
 .box .knob-label {
 	text-align: center;
-	color: #333;
+	color: rgba(15, 15, 15, 0.7);
 	font-weight: 100;
 	font-size: 12px;
 	margin-bottom: 0.3em
@@ -1899,7 +1900,7 @@ a:hover, a:active, a:focus {
 	border-bottom-left-radius: 3px;
 	border-top: 1px solid #444;
 	padding: 10px;
-	background-color: #333
+	background-color: rgba(15, 15, 15, 0.7)
 }
 
 .chart-legend {
@@ -2131,7 +2132,7 @@ a:hover, a:active, a:focus {
 .info-box {
 	display: block;
 	min-height: 90px;
-	background: #222;
+	background: rgba(15, 15, 15, 0.7);
 	width: 100%;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 	border-radius: 2px;
@@ -2245,7 +2246,7 @@ a:hover, a:active, a:focus {
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 	border-radius: 3px;
 	margin-top: 0;
-	background: #222;
+	background: rgba(15, 15, 15, 0.7);
 	color: #fff;
 	margin-left: 60px;
 	margin-right: 15px;
@@ -2295,7 +2296,7 @@ a:hover, a:active, a:focus {
 	font-weight: 600;
 	padding: 5px;
 	display: inline-block;
-	background-color: #333;
+	background-color: rgba(15, 15, 15, 0.7);
 	border-radius: 4px
 }
 
@@ -2361,7 +2362,7 @@ a:hover, a:active, a:focus {
 }
 
 .btn-default {
-	background-color: #333;
+	background-color: rgba(15, 15, 15, 0.7);
 	color: #fff;
 	border-color: #ddd
 }
@@ -2446,7 +2447,7 @@ a:hover, a:active, a:focus {
 	text-align: center;
 	color: #666;
 	border: 1px solid #ddd;
-	background-color: #333;
+	background-color: rgba(15, 15, 15, 0.7);
 	font-size: 12px
 }
 
@@ -2501,7 +2502,7 @@ a:hover, a:active, a:focus {
 }
 
 .callout code, .callout .highlight {
-	background-color: #333
+	background-color: rgba(15, 15, 15, 0.7)
 }
 
 .callout.callout-danger {
@@ -2611,7 +2612,7 @@ a:hover, a:active, a:focus {
 
 .nav-tabs-custom {
 	margin-bottom: 20px;
-	background: #222;
+	background: rgba(15, 15, 15, 0.7);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 	border-radius: 3px
 }
@@ -2656,7 +2657,7 @@ a:hover, a:active, a:focus {
 }
 
 .nav-tabs-custom>.nav-tabs>li.active>a, .nav-tabs-custom>.nav-tabs>li.active:hover>a {
-	background-color: #333;
+	background-color: rgba(15, 15, 15, 0.7);
 	color: #fff
 }
 
@@ -2707,7 +2708,7 @@ a:hover, a:active, a:focus {
 }
 
 .nav-tabs-custom>.tab-content {
-	background: #222;
+	background: rgba(15, 15, 15, 0.7);
 	padding: 10px;
 	border-bottom-right-radius: 3px;
 	border-bottom-left-radius: 3px
@@ -2851,7 +2852,7 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 .label-default {
-	background-color: #333;
+	background-color: rgba(15, 15, 15, 0.7);
 	color: #fff
 }
 
@@ -2990,7 +2991,7 @@ table.text-center, table.text-center td, table.text-center th {
 	bottom: 0;
 	height: 250px;
 	width: 100%;
-	background: #222;
+	background: rgba(15, 15, 15, 0.7);
 	color: #fff;
 	overflow: auto
 }
@@ -3365,7 +3366,7 @@ table.text-center, table.text-center td, table.text-center th {
 .lockscreen-item {
 	border-radius: 4px;
 	padding: 0;
-	background: #222;
+	background: rgba(15, 15, 15, 0.7);
 	position: relative;
 	margin: 10px auto 30px auto;
 	width: 290px
@@ -3376,7 +3377,7 @@ table.text-center, table.text-center td, table.text-center th {
 	position: absolute;
 	left: -10px;
 	top: -25px;
-	background: #222;
+	background: rgba(15, 15, 15, 0.7);
 	padding: 5px;
 	z-index: 10
 }
@@ -3396,7 +3397,7 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 .lockscreen-credentials .btn {
-	background-color: #333;
+	background-color: rgba(15, 15, 15, 0.7);
 	border: 0;
 	padding: 0 10px
 }
@@ -3504,7 +3505,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .invoice {
 	position: relative;
-	background: #222;
+	background: rgba(15, 15, 15, 0.7);
 	border: 1px solid #444;
 	padding: 20px;
 	margin: 10px 25px
@@ -3705,7 +3706,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-adn .badge {
 	color: #d87a68;
-	background-color: #333
+	background-color: rgba(15, 15, 15, 0.7)
 }
 
 .btn-bitbucket {
@@ -3738,7 +3739,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-bitbucket .badge {
 	color: #205081;
-	background-color: #333
+	background-color: rgba(15, 15, 15, 0.7)
 }
 
 .btn-dropbox {
@@ -3771,7 +3772,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-dropbox .badge {
 	color: #1087dd;
-	background-color: #333
+	background-color: rgba(15, 15, 15, 0.7)
 }
 
 .btn-facebook {
@@ -3804,7 +3805,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-facebook .badge {
 	color: #3b5998;
-	background-color: #333
+	background-color: rgba(15, 15, 15, 0.7)
 }
 
 .btn-flickr {
@@ -3866,12 +3867,12 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-foursquare .badge {
 	color: #f94877;
-	background-color: #333
+	background-color: rgba(15, 15, 15, 0.7)
 }
 
 .btn-github {
 	color: #fff;
-	background-color: #333;
+	background-color: rgba(15, 15, 15, 0.7);
 	border-color: rgba(0, 0, 0, 0.2)
 }
 
@@ -3899,7 +3900,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-github .badge {
 	color: #fff;
-	background-color: #333
+	background-color: rgba(15, 15, 15, 0.7)
 }
 
 .btn-google {
@@ -3932,7 +3933,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-google .badge {
 	color: #dd4b39;
-	background-color: #333
+	background-color: rgba(15, 15, 15, 0.7)
 }
 
 .btn-instagram {
@@ -3965,7 +3966,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-instagram .badge {
 	color: #3f729b;
-	background-color: #333
+	background-color: rgba(15, 15, 15, 0.7)
 }
 
 .btn-linkedin {
@@ -3998,7 +3999,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-linkedin .badge {
 	color: #007bb6;
-	background-color: #333
+	background-color: rgba(15, 15, 15, 0.7)
 }
 
 .btn-microsoft {
@@ -4031,7 +4032,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-microsoft .badge {
 	color: #2672ec;
-	background-color: #333
+	background-color: rgba(15, 15, 15, 0.7)
 }
 
 .btn-openid {
@@ -4064,7 +4065,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-openid .badge {
 	color: #f7931e;
-	background-color: #333
+	background-color: rgba(15, 15, 15, 0.7)
 }
 
 .btn-pinterest {
@@ -4097,7 +4098,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-pinterest .badge {
 	color: #cb2027;
-	background-color: #333
+	background-color: rgba(15, 15, 15, 0.7)
 }
 
 .btn-reddit {
@@ -4163,7 +4164,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-soundcloud .badge {
 	color: #f50;
-	background-color: #333
+	background-color: rgba(15, 15, 15, 0.7)
 }
 
 .btn-tumblr {
@@ -4196,7 +4197,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-tumblr .badge {
 	color: #2c4762;
-	background-color: #333
+	background-color: rgba(15, 15, 15, 0.7)
 }
 
 .btn-twitter {
@@ -4229,7 +4230,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-twitter .badge {
 	color: #55acee;
-	background-color: #333
+	background-color: rgba(15, 15, 15, 0.7)
 }
 
 .btn-vimeo {
@@ -4262,7 +4263,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-vimeo .badge {
 	color: #1ab7ea;
-	background-color: #333
+	background-color: rgba(15, 15, 15, 0.7)
 }
 
 .btn-vk {
@@ -4295,7 +4296,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-vk .badge {
 	color: #587ea3;
-	background-color: #333
+	background-color: rgba(15, 15, 15, 0.7)
 }
 
 .btn-yahoo {
@@ -4328,7 +4329,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-yahoo .badge {
 	color: #720e9e;
-	background-color: #333
+	background-color: rgba(15, 15, 15, 0.7)
 }
 
 .fc-button {
@@ -4991,7 +4992,7 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 .list-link>a:hover {
-	color: #222
+	color: rgba(15, 15, 15, 0.7)
 }
 
 .font-light {
