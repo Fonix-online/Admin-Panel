@@ -25,8 +25,19 @@
 
 @section('content')
 <div class="login-box-body">
+    @if (count($errors) > 0)
+        <div class="callout callout-danger">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            @lang('auth.auth_error')<br><br>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <p class="login-box-msg">@lang('auth.reset_password_text')</p>
-    <form action="{{ route('auth.reset.post') }}" method="POST">
+    <form id="resetForm" action="{{ route('auth.reset.post') }}" method="POST">
         <div class="form-group">
             <label for="email" class="control-label">@lang('strings.email')</label>
             <div>
@@ -65,9 +76,21 @@
             <div class="col-xs-12">
                 {!! csrf_field() !!}
                 <input type="hidden" name="token" value="{{ $token }}">
-                <button type="submit" class="btn btn-primary btn-block btn-flat">@lang('auth.reset_password')</button>
+                <button type="submit" class="btn btn-primary btn-block btn-flat g-recaptcha" @if(config('recaptcha.enabled')) data-sitekey="{{ config('recaptcha.website_key') }}" data-callback='onSubmit' @endif>@lang('auth.reset_password')</button>
             </div>
         </div>
     </form>
 </div>
+@endsection
+
+@section('scripts')
+    @parent
+    @if(config('recaptcha.enabled'))
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script>
+        function onSubmit(token) {
+            document.getElementById("resetForm").submit();
+        }
+        </script>
+     @endif
 @endsection

@@ -47,6 +47,7 @@
                 @endif
                 <li><a href="{{ route('admin.servers.view.manage', $server->id) }}">Manage</a></li>
                 <li class="tab-danger"><a href="{{ route('admin.servers.view.delete', $server->id) }}">Delete</a></li>
+                <li class="tab-success"><a href="{{ route('server.index', $server->uuidShort) }}"><i class="fa fa-external-link"></i></a></li>
             </ul>
         </div>
     </div>
@@ -90,7 +91,14 @@
                         </div>
                         <p class="text-muted small">Changing this value can have negative effects on all containers on the system. We strongly recommend leaving this value as <code>500</code>.</p>
                     </div>
-
+                    <div class="form-group">
+                        <label for="cpu" class="control-label">Disk Space Limit</label>
+                        <div class="input-group">
+                            <input type="text" name="disk" class="form-control" value="{{ old('disk', $server->disk) }}"/>
+                            <span class="input-group-addon">MB</span>
+                        </div>
+                        <p class="text-muted small">This server will not be allowed to boot if it is using more than this amount of space. If a server goes over this limit while running it will be safely stopped and locked until enough space is available.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -129,7 +137,7 @@
                         <div>
                             <select name="remove_allocations[]" class="form-control" multiple id="pRemoveAllocations">
                                 @foreach ($assigned as $assignment)
-                                    <option value="{{ $assignment->id }}" @if($server->allocation_id === $assignment->id)disabled @endif>{{ $assignment->alias }}:{{ $assignment->port }}</option>
+                                    <option value="{{ $assignment->id }}">{{ $assignment->alias }}:{{ $assignment->port }}</option>
                                 @endforeach
                             </select>
                         </div>

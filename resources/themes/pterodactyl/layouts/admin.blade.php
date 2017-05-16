@@ -58,7 +58,7 @@
         <div class="wrapper">
             <header class="main-header">
                 <a href="{{ route('index') }}" class="logo">
-                    <img src="/img/title.png" alt="DH Logo" height="27" width="210">
+                    <span>{{ Settings::get('company', 'Pterodactyl') }}</span>
                 </a>
                 <nav class="navbar navbar-static-top">
                     <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
@@ -168,11 +168,12 @@
                     @yield('content')
                 </section>
             </div>
-		<footer class="main-footer">
-                <div class="pull-right hidden-xs small text-gray">
-                    Panel Version:<strong> v</strong>{{ config('app.version') }} | DH Status: Connected
+            <footer class="main-footer">
+                <div class="pull-right small text-gray" style="margin-right:10px;margin-top:-7px;">
+                    <strong><i class="fa fa-fw {{ $appIsGit ? 'fa-git-square' : 'fa-code-fork' }}"></i></strong> {{ $appVersion }}<br />
+                    <strong><i class="fa fa-fw fa-clock-o"></i></strong> {{ round(microtime(true) - LARAVEL_START, 3) }}s
                 </div>
-                Copyright &copy; 2015 - {{ date('Y') }} <a href="https://fonix.online">Fonix</a>.
+                Copyright &copy; 2015 - {{ date('Y') }} <a href="https://pterodactyl.io/">Pterodactyl Software</a>.
             </footer>
         </div>
         @section('footer-scripts')
@@ -189,6 +190,7 @@
             {!! Theme::js('vendor/bootstrap-notify/bootstrap-notify.min.js') !!}
             {!! Theme::js('vendor/select2/select2.full.min.js') !!}
             {!! Theme::js('js/admin/functions.js') !!}
+            {!! Theme::js('js/autocomplete.js') !!}
         @show
     </body>
 </html>

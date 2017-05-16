@@ -35,7 +35,7 @@
 @section('content')
 <div class="row">
     <form action="{{ route('admin.users.view', $user->id) }}" method="post">
-        <div class="col-xs-6">
+        <div class="col-md-6">
             <div class="box box-primary">
                 <div class="box-header with-border">
                     <h3 class="box-title">Identity</h3>
@@ -44,25 +44,25 @@
                     <div class="form-group">
                         <label for="email" class="control-label">Email</label>
                         <div>
-                            <input type="text" name="email" value="{{ $user->email }}" class="form-control">
+                            <input readonly type="email" name="email" value="{{ $user->email }}" class="form-control form-autocomplete-stop">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="registered" class="control-label">Username</label>
                         <div>
-                            <input type="text" name="username" value="{{ $user->username }}" class="form-control">
+                            <input readonly type="text" name="username" value="{{ $user->username }}" class="form-control form-autocomplete-stop">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="registered" class="control-label">Client First Name</label>
                         <div>
-                            <input type="text" name="name_first" value="{{ $user->name_first }}" class="form-control">
+                            <input readonly type="text" name="name_first" value="{{ $user->name_first }}" class="form-control form-autocomplete-stop">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="registered" class="control-label">Client Last Name</label>
                         <div>
-                            <input type="text" name="name_last" value="{{ $user->name_last }}" class="form-control">
+                            <input readonly type="text" name="name_last" value="{{ $user->name_last }}" class="form-control form-autocomplete-stop">
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-6">
+        <div class="col-md-6">
             <div class="box">
                 <div class="box-header with-border">
                     <h3 class="box-title">Password</h3>
@@ -82,13 +82,13 @@
                     <div class="form-group">
                         <label for="password" class="control-label">Password</label>
                         <div>
-                            <input type="password" id="password" name="password" class="form-control">
+                            <input readonly type="password" id="password" name="password" class="form-control form-autocomplete-stop">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-xs-6">
+        <div class="col-md-6">
             <div class="box">
                 <div class="box-header with-border">
                     <h3 class="box-title">Permissions</h3>
@@ -126,7 +126,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($user->access()->get() as $server)
+                        @foreach($user->setAccessLevel('subuser')->access()->get() as $server)
                             <tr>
                                 <td><a href="{{ route('server.index', $server->uuidShort) }}/"><i class="fa fa-tachometer"></i></a></td>
                                 <td><code>{{ $server->uuidShort }}</code></td>
@@ -166,25 +166,4 @@
         </div>
     </div>
 </div>
-@endsection
-
-@section('footer-scripts')
-    @parent
-    <script>$("#gen_pass_bttn").click(function (event) {
-            event.preventDefault();
-            $.ajax({
-                type: "GET",
-                url: "/password-gen/12",
-                headers: {
-                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
-               },
-                success: function(data) {
-                    $("#gen_pass").html('You must click <em>Update Password</em> below for this password to be applied.<br /><br /><strong>Generated Password:</strong> ' + data).slideDown();
-                    $('input[name="password"], input[name="password_confirmation"]').val(data);
-                    return false;
-                }
-            });
-            return false;
-        });
-    </script>
 @endsection

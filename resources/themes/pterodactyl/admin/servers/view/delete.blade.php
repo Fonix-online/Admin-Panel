@@ -47,12 +47,13 @@
                 @endif
                 <li><a href="{{ route('admin.servers.view.manage', $server->id) }}">Manage</a></li>
                 <li class="tab-danger active"><a href="{{ route('admin.servers.view.delete', $server->id) }}">Delete</a></li>
+                <li class="tab-success"><a href="{{ route('server.index', $server->uuidShort) }}"><i class="fa fa-external-link"></i></a></li>
             </ul>
         </div>
     </div>
 </div>
 <div class="row">
-    <div class="col-xs-6">
+    <div class="col-md-6">
         <div class="box">
             <div class="box-header with-border">
                 <h3 class="box-title">Safely Delete Server</h3>
@@ -69,7 +70,7 @@
             </div>
         </div>
     </div>
-    <div class="col-xs-6">
+    <div class="col-md-6">
         <div class="box box-danger">
             <div class="box-header with-border">
                 <h3 class="box-title">Force Delete Server</h3>

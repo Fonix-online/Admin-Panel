@@ -46,6 +46,7 @@
                 @endif
                 <li><a href="{{ route('admin.servers.view.manage', $server->id) }}">Manage</a></li>
                 <li class="tab-danger"><a href="{{ route('admin.servers.view.delete', $server->id) }}">Delete</a></li>
+                <li class="tab-success"><a href="{{ route('server.index', $server->uuidShort) }}"><i class="fa fa-external-link"></i></a></li>
             </ul>
         </div>
     </div>
@@ -73,8 +74,15 @@
                                 <td data-attr="container-user"><i class="fa fa-fw fa-refresh fa-spin"></i></td>
                             </tr>
                             <tr>
+                                <td>Docker Container Name</td>
+                                <td>{{ $server->username }}</td>
+                            </tr>
+                            <tr>
                                 <td>Service</td>
-                                <td>{{ $server->option->service->name }} :: {{ $server->option->name }}</td>
+                                <td>
+                                    <a href="{{ route('admin.services.view', $server->option->service->id) }}">{{ $server->option->service->name }}</a> ::
+                                    <a href="{{ route('admin.services.option.view', $server->option->id) }}">{{ $server->option->name }}</a>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Name</td>

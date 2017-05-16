@@ -47,11 +47,28 @@
                 @endif
                 <li class="active"><a href="{{ route('admin.servers.view.manage', $server->id) }}">Manage</a></li>
                 <li class="tab-danger"><a href="{{ route('admin.servers.view.delete', $server->id) }}">Delete</a></li>
+                <li class="tab-success"><a href="{{ route('server.index', $server->uuidShort) }}"><i class="fa fa-external-link"></i></a></li>
             </ul>
         </div>
     </div>
 </div>
 <div class="row">
+    <div class="col-sm-4">
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">Reinstall Server</h3>
+            </div>
+            <div class="box-body">
+                <p>This will reinstall the server with the assigned pack and service scripts. <strong>Danger!</strong> This could overwrite server data.</p>
+            </div>
+            <div class="box-footer">
+                <form action="{{ route('admin.servers.view.manage.reinstall', $server->id) }}" method="POST">
+                    {!! csrf_field() !!}
+                    <button type="submit" class="btn btn-danger">Reinstall Server</button>
+                </form>
+            </div>
+        </div>
+    </div>
     <div class="col-sm-4">
         <div class="box box-primary">
             <div class="box-header with-border">

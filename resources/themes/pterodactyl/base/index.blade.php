@@ -79,11 +79,7 @@
                                     @endif
                                 </td>
                                 <td class="text-center" data-action="status">
-                                    @if($server->suspended === 1)
-                                        <span class="label label-warning">@lang('strings.suspended')</span>
-                                    @else
-                                        <span class="label label-default"><i class="fa fa-refresh fa-fw fa-spin"></i></span>
-                                    @endif
+                                    <span class="label label-default"><i class="fa fa-refresh fa-fw fa-spin"></i></span>
                                 </td>
                             </tr>
                             @if (! empty($server->description))
