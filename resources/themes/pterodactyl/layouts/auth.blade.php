@@ -54,7 +54,7 @@
             </div>
             @yield('content')
             <p class="small text-muted">
-                Copyright &copy; 2015 - {{ date('Y') }} <a href="https://pterodactyl.io/" target="_blank">Pterodactyl Software</a>.<br />
+              Copyright &copy; 2015 - {{ date('Y') }} <a href="https://fonix.online">Fonix</a>.<br />
             </p>
             <div class="login-corner-info muted small">
                 <strong><i class="fa fa-fw {{ $appIsGit ? 'fa-git-square' : 'fa-code-fork' }}"></i></strong> {{ $appVersion }}<br />
