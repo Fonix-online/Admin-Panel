@@ -22,17 +22,22 @@
  */
  @import 'checkbox.css';
 
- .login-box, .register-box {
-     width: 40%;
-     margin: 7% auto
- }
+.login-page {
+    height: auto;
+}
 
- @media (max-width:768px) {
-     .login-box, .register-box {
-         width: 90%;
-         margin-top: 20px
-     }
- }
+.login-box, .register-box {
+    width: 40%;
+    max-width: 500px;
+    margin: 7% auto;
+}
+
+@media (max-width:768px) {
+    .login-box, .register-box {
+        width: 90%;
+        margin-top: 20px
+    }
+}
 
 .weight-100 {
     font-weight: 100;
@@ -254,13 +259,12 @@ span[aria-labelledby="select2-pUserId-container"] {
 
 .terminal-notify {
     position: absolute;
-    right: 10px;
+    right: 27px;
     bottom: 10px;
-    /* Browsers usually have a 17px scrollbar which is visible in the terminal */
-    padding: 7px 24px 7px 7px;
-    border-top-left-radius: 3px;
-    background: white;
-    color: black;
+    padding: 3.5px 7px;
+    border-radius: 3px 3px 0 0;
+    background: #ccc;
+    color: #000;
     opacity: .5;
     cursor: pointer;
 }
@@ -288,4 +292,15 @@ span[aria-labelledby="select2-pUserId-container"] {
 
 tr:hover + tr.server-description {
     background-color: #f5f5f5 !important;
+}
+
+.login-corner-info {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+input.form-autocomplete-stop[readonly] {
+    background: inherit;
+    cursor: text;
 }
