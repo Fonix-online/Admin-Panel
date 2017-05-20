@@ -77,6 +77,9 @@
                             <li>
                                 <a href="#" data-action="control-sidebar" data-toggle="tooltip" data-placement="bottom" title="{{ @trans('strings.servers') }}"><i class="fa fa-server"></i></a>
                             </li>
+                            <li>
+                                <a href="mailto:fonix@digitalhazards.net" data-toggle="tooltip" data-placement="bottom" title="Email Fonix"><i class="fa fa-server"></i></a>
+                            </li>
                             @if(Auth::user()->isRootAdmin())
                                 <li>
                                     <li><a href="{{ route('admin.index') }}" data-toggle="tooltip" data-placement="bottom" title="{{ @trans('strings.admin_cp') }}"><i class="fa fa-gears"></i></a></li>
@@ -121,6 +124,51 @@
                                 <i class="fa fa-server"></i> <span>@lang('navigation.account.my_servers')</span>
                             </a>
                         </li>
+
+                        <li class="header">Network Storage</li>
+                            <a href="http://cloud.digitalhazards.net">
+                                <i class="fa fa-user"></i> <span>Cloud Server</span>
+                            </a>
+                        </li>
+                            <a href="http://solder.digitalhazards.net">
+                                <i class="fa fa-lock"></i> <span>Solder Page</span>
+                            </a>
+                        </li>
+                            <a href="http://src.dhmini.xyz">
+                                <i class="fa fa-code"></i> <span>Solder Repo</span>
+                            </a>
+                        </li>
+
+                        <li class="{{ Route::currentRouteName() !== 'index' ?: 'active' }}">
+                            <a href="{{ route('index')}}">
+                                <i class="fa fa-server"></i> <span>@lang('navigation.account.my_servers')</span>
+                            </a>
+                        </li>
+
+                        <li class="header">Network information</li>
+                            <a href="https://wiki.digitalhazards.net">
+                                <i class="fa fa-user"></i> <span>DH Wiki</span>
+                            </a>
+                        </li>
+                            <a href="http://status.digitalhazards.net">
+                                <i class="fa fa-lock"></i> <span>Network Status</span>
+                            </a>
+                        </li>
+                            <a href="http://structure.digitalhazards.net">
+                                <i class="fa fa-code"></i> <span>Network Structure</span>
+                            </a>
+                        </li>
+
+                        <li class="header">Other Links</li>
+                            <a href="http://dhmini.xyz">
+                                <i class="fa fa-user"></i> <span>URL Shortner</span>
+                            </a>
+                        </li>
+                            <a href="https://mail.digitalhazards.net">
+                                <i class="fa fa-lock"></i> <span>Mail Server</span>
+                            </a>
+                        </li>
+
                         @if (isset($server->name) && isset($node->name))
                             <li class="header">@lang('navigation.server.header')</li>
                             <li class="{{ Route::currentRouteName() !== 'server.index' ?: 'active' }}">
