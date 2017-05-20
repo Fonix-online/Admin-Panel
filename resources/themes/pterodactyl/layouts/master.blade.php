@@ -126,14 +126,17 @@
                         </li>
 
                         <li class="header">Network Storage</li>
+                        <li class="{{ Route::currentRouteName() !== 'index' ?: 'active' }}">
                             <a href="http://cloud.digitalhazards.net">
                                 <i class="fa fa-user"></i> <span>Cloud Server</span>
                             </a>
                         </li>
+                        <li class="{{ Route::currentRouteName() !== 'index' ?: 'active' }}">
                             <a href="http://solder.digitalhazards.net">
                                 <i class="fa fa-lock"></i> <span>Solder Page</span>
                             </a>
                         </li>
+                        <li class="{{ Route::currentRouteName() !== 'index' ?: 'active' }}">
                             <a href="http://src.dhmini.xyz">
                                 <i class="fa fa-code"></i> <span>Solder Repo</span>
                             </a>
@@ -146,24 +149,29 @@
                         </li>
 
                         <li class="header">Network information</li>
+                        <li class="{{ Route::currentRouteName() !== 'index' ?: 'active' }}">
                             <a href="https://wiki.digitalhazards.net">
                                 <i class="fa fa-user"></i> <span>DH Wiki</span>
                             </a>
                         </li>
+                        <li class="{{ Route::currentRouteName() !== 'index' ?: 'active' }}">
                             <a href="http://status.digitalhazards.net">
                                 <i class="fa fa-lock"></i> <span>Network Status</span>
                             </a>
                         </li>
+                        <li class="{{ Route::currentRouteName() !== 'index' ?: 'active' }}">
                             <a href="http://structure.digitalhazards.net">
                                 <i class="fa fa-code"></i> <span>Network Structure</span>
                             </a>
                         </li>
 
                         <li class="header">Other Links</li>
+                        <li class="{{ Route::currentRouteName() !== 'index' ?: 'active' }}">
                             <a href="http://dhmini.xyz">
                                 <i class="fa fa-user"></i> <span>URL Shortner</span>
                             </a>
                         </li>
+                        <li class="{{ Route::currentRouteName() !== 'index' ?: 'active' }}">
                             <a href="https://mail.digitalhazards.net">
                                 <i class="fa fa-lock"></i> <span>Mail Server</span>
                             </a>
