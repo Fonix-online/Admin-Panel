@@ -78,7 +78,7 @@
                                 <a href="#" data-action="control-sidebar" data-toggle="tooltip" data-placement="bottom" title="{{ @trans('strings.servers') }}"><i class="fa fa-server"></i></a>
                             </li>
                             <li>
-                                <a href="mailto:fonix@digitalhazards.net" data-toggle="tooltip" data-placement="bottom" title="Email Fonix"><i class="fa fa-server"></i></a>
+                                <a href="mailto:fonix@digitalhazards.net" data-toggle="tooltip" data-placement="bottom" title="Email Fonix"><i class="fa fa-envelope"></i></a>
                             </li>
                             @if(Auth::user()->isRootAdmin())
                                 <li>
@@ -128,52 +128,46 @@
                         <li class="header">Network Storage</li>
                         <li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
                             <a href="http://cloud.digitalhazards.net">
-                                <i class="fa fa-user"></i> <span>Cloud Server</span>
+                                <i class="fa fa-cloud"></i> <span>Cloud Server</span>
                             </a>
                         </li>
                         <li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
                             <a href="http://solder.digitalhazards.net">
-                                <i class="fa fa-lock"></i> <span>Solder Page</span>
+                                <i class="fa fa-microchip"></i> <span>Solder Page</span>
                             </a>
                         </li>
                         <li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
                             <a href="http://src.dhmini.xyz">
-                                <i class="fa fa-code"></i> <span>Solder Repo</span>
-                            </a>
-                        </li>
-
-                        <li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
-                            <a href="{{ route('index')}}">
-                                <i class="fa fa-server"></i> <span>@lang('navigation.account.my_servers')</span>
+                                <i class="fa fa-folder-open"></i> <span>Solder Repo</span>
                             </a>
                         </li>
 
                         <li class="header">Network information</li>
                         <li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
                             <a href="https://wiki.digitalhazards.net">
-                                <i class="fa fa-user"></i> <span>DH Wiki</span>
+                                <i class="fa fa-info"></i> <span>DH Wiki</span>
                             </a>
                         </li>
                         <li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
                             <a href="http://status.digitalhazards.net">
-                                <i class="fa fa-lock"></i> <span>Network Status</span>
+                                <i class="fa fa-stack-exchange"></i> <span>Network Status</span>
                             </a>
                         </li>
                         <li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
                             <a href="http://structure.digitalhazards.net">
-                                <i class="fa fa-code"></i> <span>Network Structure</span>
+                                <i class="fa fa-eercast"></i> <span>Network Structure</span>
                             </a>
                         </li>
 
                         <li class="header">Other Links</li>
                         <li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
                             <a href="http://dhmini.xyz">
-                                <i class="fa fa-user"></i> <span>URL Shortner</span>
+                                <i class="fa fa-underline"></i> <span>URL Shortner</span>
                             </a>
                         </li>
                         <li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
                             <a href="https://mail.digitalhazards.net">
-                                <i class="fa fa-lock"></i> <span>Mail Server</span>
+                                <i class="fa fa-envelope-o"></i> <span>Mail Server</span>
                             </a>
                         </li>
 
