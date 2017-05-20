@@ -291,7 +291,7 @@ span[aria-labelledby="select2-pUserId-container"] {
 }
 
 tr:hover + tr.server-description {
-    background-color: #f5f5f5 !important;
+    background-color: transparent !important;
 }
 
 .login-corner-info {
