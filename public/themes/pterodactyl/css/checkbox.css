@@ -99,8 +99,8 @@
     color: #fff;
 }
 .checkbox-info input[type="checkbox"]:checked + label::before {
-    background-color: #5bc0de;
-    border-color: #5bc0de;
+    background-color: #438ba0;
+    border-color: #438ba0;
 }
 .checkbox-info input[type="checkbox"]:checked + label::after {
     color: #fff;
@@ -204,13 +204,13 @@
     background-color: #d9534f;
 }
 .radio-info input[type="radio"] + label::after {
-    background-color: #5bc0de;
+    background-color: #438ba0;
 }
 .radio-info input[type="radio"]:checked + label::before {
-    border-color: #5bc0de;
+    border-color: #438ba0;
 }
 .radio-info input[type="radio"]:checked + label::after {
-    background-color: #5bc0de;
+    background-color: #438ba0;
 }
 .radio-warning input[type="radio"] + label::after {
     background-color: #f0ad4e;
