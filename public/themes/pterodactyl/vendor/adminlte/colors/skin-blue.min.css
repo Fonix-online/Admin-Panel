@@ -17,6 +17,7 @@
 }
 .skin-blue .main-header .navbar .sidebar-toggle {
 	color: #fff
+  transition: all 0.25s;
 }
 .skin-blue .main-header .navbar .sidebar-toggle:hover {
 	background-color: #00A8ff
