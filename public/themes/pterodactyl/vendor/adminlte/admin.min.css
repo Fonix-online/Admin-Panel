@@ -848,7 +848,7 @@ a:hover, a:active, a:focus {
 }
 
 .control-sidebar-dark, .control-sidebar-dark+.control-sidebar-bg {
-	background: #333
+	background: rgba(25, 30, 34, 1)!important;
 }
 
 .control-sidebar-dark .nav-tabs.control-sidebar-tabs {
@@ -953,7 +953,7 @@ a:hover, a:active, a:focus {
 
 .dropdown-menu>li>a:hover {
 	background-color: #e1e3e9;
-	color: #333
+	color: rgba(25, 30, 34, 1)!important;
 }
 
 .dropdown-menu>.divider {
@@ -976,7 +976,7 @@ a:hover, a:active, a:focus {
 	border-top-right-radius: 4px;
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
-	background-color: #333fff;
+	background-color: rgba(25, 30, 34, 1)!important;fff;
 	padding: 7px 10px;
 	border-bottom: 1px solid #444;
 	color: #fff444;
@@ -989,7 +989,7 @@ a:hover, a:active, a:focus {
 	border-bottom-right-radius: 4px;
 	border-bottom-left-radius: 4px;
 	font-size: 12px;
-	background-color: #333;
+	background-color: rgba(25, 30, 34, 1)!important;;
 	padding: 7px 10px;
 	border-bottom: 1px solid #eeeeee;
 	color: #fff !important;
@@ -1346,7 +1346,7 @@ a:hover, a:active, a:focus {
 .input-group .input-group-addon {
 	border-radius: 0;
 	border-color: #d2d6de;
-	background-color: #333
+	background-color: rgba(25, 30, 34, 1)!important;
 }
 
 .btn-group-vertical .btn.btn-flat:first-of-type, .btn-group-vertical .btn.btn-flat:last-of-type {
@@ -1746,7 +1746,7 @@ a:hover, a:active, a:focus {
 
 .box .knob-label {
 	text-align: center;
-	color: #333;
+	color: rgba(25, 30, 34, 1)!important;;
 	font-weight: 100;
 	font-size: 12px;
 	margin-bottom: 0.3em
@@ -1899,7 +1899,7 @@ a:hover, a:active, a:focus {
 	border-bottom-left-radius: 3px;
 	border-top: 1px solid #444;
 	padding: 10px;
-	background-color: #333
+	background-color: rgba(25, 30, 34, 1)!important;
 }
 
 .chart-legend {
@@ -2295,7 +2295,7 @@ a:hover, a:active, a:focus {
 	font-weight: 600;
 	padding: 5px;
 	display: inline-block;
-	background-color: #333;
+	background-color: rgba(25, 30, 34, 1)!important;;
 	border-radius: 4px
 }
 
@@ -2361,7 +2361,7 @@ a:hover, a:active, a:focus {
 }
 
 .btn-default {
-	background-color: #333;
+	background-color: rgba(25, 30, 34, 1)!important;;
 	color: #fff;
 	border-color: #ddd
 }
@@ -2446,7 +2446,7 @@ a:hover, a:active, a:focus {
 	text-align: center;
 	color: #666;
 	border: 1px solid #ddd;
-	background-color: #333;
+	background-color: rgba(25, 30, 34, 1)!important;;
 	font-size: 12px
 }
 
@@ -2501,7 +2501,7 @@ a:hover, a:active, a:focus {
 }
 
 .callout code, .callout .highlight {
-	background-color: #333
+	background-color: rgba(25, 30, 34, 1)!important;
 }
 
 .callout.callout-danger {
@@ -2656,7 +2656,7 @@ a:hover, a:active, a:focus {
 }
 
 .nav-tabs-custom>.nav-tabs>li.active>a, .nav-tabs-custom>.nav-tabs>li.active:hover>a {
-	background-color: #333;
+	background-color: rgba(25, 30, 34, 1)!important;;
 	color: #fff
 }
 
@@ -2851,7 +2851,7 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 .label-default {
-	background-color: #333;
+	background-color: rgba(25, 30, 34, 1)!important;;
 	color: #fff
 }
 
@@ -3396,7 +3396,7 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 .lockscreen-credentials .btn {
-	background-color: #333;
+	background-color: rgba(25, 30, 34, 1)!important;;
 	border: 0;
 	padding: 0 10px
 }
@@ -3705,7 +3705,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-adn .badge {
 	color: #d87a68;
-	background-color: #333
+	background-color: rgba(25, 30, 34, 1)!important;
 }
 
 .btn-bitbucket {
@@ -3738,7 +3738,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-bitbucket .badge {
 	color: #205081;
-	background-color: #333
+	background-color: rgba(25, 30, 34, 1)!important;
 }
 
 .btn-dropbox {
@@ -3771,7 +3771,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-dropbox .badge {
 	color: #1087dd;
-	background-color: #333
+	background-color: rgba(25, 30, 34, 1)!important;
 }
 
 .btn-facebook {
@@ -3804,7 +3804,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-facebook .badge {
 	color: #3b5998;
-	background-color: #333
+	background-color: rgba(25, 30, 34, 1)!important;
 }
 
 .btn-flickr {
@@ -3866,12 +3866,12 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-foursquare .badge {
 	color: #f94877;
-	background-color: #333
+	background-color: rgba(25, 30, 34, 1)!important;
 }
 
 .btn-github {
 	color: #fff;
-	background-color: #333;
+	background-color: rgba(25, 30, 34, 1)!important;;
 	border-color: rgba(0, 0, 0, 0.2)
 }
 
@@ -3899,7 +3899,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-github .badge {
 	color: #fff;
-	background-color: #333
+	background-color: rgba(25, 30, 34, 1)!important;
 }
 
 .btn-google {
@@ -3932,7 +3932,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-google .badge {
 	color: #dd4b39;
-	background-color: #333
+	background-color: rgba(25, 30, 34, 1)!important;
 }
 
 .btn-instagram {
@@ -3965,7 +3965,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-instagram .badge {
 	color: #3f729b;
-	background-color: #333
+	background-color: rgba(25, 30, 34, 1)!important;
 }
 
 .btn-linkedin {
@@ -3998,7 +3998,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-linkedin .badge {
 	color: #007bb6;
-	background-color: #333
+	background-color: rgba(25, 30, 34, 1)!important;
 }
 
 .btn-microsoft {
@@ -4031,7 +4031,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-microsoft .badge {
 	color: #2672ec;
-	background-color: #333
+	background-color: rgba(25, 30, 34, 1)!important;
 }
 
 .btn-openid {
@@ -4064,7 +4064,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-openid .badge {
 	color: #f7931e;
-	background-color: #333
+	background-color: rgba(25, 30, 34, 1)!important;
 }
 
 .btn-pinterest {
@@ -4097,7 +4097,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-pinterest .badge {
 	color: #cb2027;
-	background-color: #333
+	background-color: rgba(25, 30, 34, 1)!important;
 }
 
 .btn-reddit {
@@ -4163,7 +4163,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-soundcloud .badge {
 	color: #f50;
-	background-color: #333
+	background-color: rgba(25, 30, 34, 1)!important;
 }
 
 .btn-tumblr {
@@ -4196,7 +4196,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-tumblr .badge {
 	color: #2c4762;
-	background-color: #333
+	background-color: rgba(25, 30, 34, 1)!important;
 }
 
 .btn-twitter {
@@ -4229,7 +4229,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-twitter .badge {
 	color: #55acee;
-	background-color: #333
+	background-color: rgba(25, 30, 34, 1)!important;
 }
 
 .btn-vimeo {
@@ -4262,7 +4262,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-vimeo .badge {
 	color: #1ab7ea;
-	background-color: #333
+	background-color: rgba(25, 30, 34, 1)!important;
 }
 
 .btn-vk {
@@ -4295,7 +4295,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-vk .badge {
 	color: #587ea3;
-	background-color: #333
+	background-color: rgba(25, 30, 34, 1)!important;
 }
 
 .btn-yahoo {
@@ -4328,7 +4328,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-yahoo .badge {
 	color: #720e9e;
-	background-color: #333
+	background-color: rgba(25, 30, 34, 1)!important;
 }
 
 .fc-button {
