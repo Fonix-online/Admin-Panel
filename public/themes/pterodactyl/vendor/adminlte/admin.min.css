@@ -5177,3 +5177,14 @@ table.text-center, table.text-center td, table.text-center th {
 		white-space: normal !important
 	}
 }
+@keyframes redpulse {
+  0% {
+    background-color: #001F3F;
+  }
+  100% {
+    background-color: #FF4136;
+  }
+	0% {
+		background-color: #001F3F;
+	}
+}
