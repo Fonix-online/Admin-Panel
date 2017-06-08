@@ -48,7 +48,7 @@
 	background: transparent
 }
 .skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side {
-	background-color: #222
+	background-color: rgba(25, 30, 34, 1)!important;
 }
 .skin-blue .user-panel>.info, .skin-blue .user-panel>.info>a {
 	color: #fff
