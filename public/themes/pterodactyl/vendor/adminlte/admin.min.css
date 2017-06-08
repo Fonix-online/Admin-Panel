@@ -150,7 +150,8 @@ a {
 a:hover, a:active, a:focus {
 	outline: none;
 	text-decoration: none;
-	color: #72afd2
+	color: #dadada;
+	transition: all 0.25s;
 }
 
 .page-header {

@@ -64,7 +64,7 @@
 }
 .skin-blue .sidebar-menu>li:hover>a, .skin-blue .sidebar-menu>li.active>a {
 	color: #fff;
-	background: #444;
+	background: #0d4673;
 	border-left-color: rgba(25, 30, 34, 1)!important;
   transition: all 0.25s;
 }
