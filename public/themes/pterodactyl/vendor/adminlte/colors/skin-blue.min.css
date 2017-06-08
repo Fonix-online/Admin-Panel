@@ -64,6 +64,7 @@
 	color: #fff;
 	background: #444;
 	border-left-color: rgba(25, 30, 34, 1)!important;
+  transition: all 0.25s;
 }
 .skin-blue .sidebar-menu>li>.treeview-menu {
 	margin: 0 1px;
