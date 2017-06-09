@@ -103,12 +103,5 @@
 
 @section('footer-scripts')
     @parent
-    <script>
-        $('tr.server-description').on('mouseenter mouseleave', function (event) {
-            $(this).prev('tr').css({
-                'background-color': (event.type === 'mouseenter') ? '#f5f5f5' : '',
-            });
-        });
-    </script>
     {!! Theme::js('js/frontend/serverlist.js') !!}
 @endsection
