@@ -953,8 +953,7 @@ a:hover, a:active, a:focus {
 }
 
 .dropdown-menu>li>a:hover {
-	background-color: #e1e3e9;
-	color: rgba(25, 30, 34, 1)!important;
+	color: #00A8FF;
 }
 
 .dropdown-menu>.divider {
@@ -5187,7 +5186,4 @@ table.text-center, table.text-center td, table.text-center th {
 	0% {
 		background-color: #001F3F;
 	}
-}
-.label-danger {
-	animation: redpulse 5s infinite!important;
 }
