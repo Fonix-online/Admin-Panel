@@ -2746,7 +2746,7 @@ a:hover, a:active, a:focus {
 
 .pagination>li>a {
 	background: #fafafa;
-	color: #666
+	color: #fff
 }
 
 .pagination.pagination-flat>li>a {
