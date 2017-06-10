@@ -63,7 +63,7 @@
                         </tr>
                         @foreach($servers as $server)
                             <tr class="dynamic-update" data-server="{{ $server->uuidShort }}">
-                                <td @if(! empty($server->description)) rowspan="2" @endif><code>{{ $server->uuidShort }}</code></td>
+                                <td @if(! empty($server->description)) rowspan="2" @endif><code>{{ $server->username }}</code></td>
                                 <td><a href="{{ route('server.index', $server->uuidShort) }}">{{ $server->name }}</a></td>
                                 <td>{{ $server->node->name }}</td>
                                 <td><code>{{ $server->allocation->alias }}:{{ $server->allocation->port }}</code></td>
