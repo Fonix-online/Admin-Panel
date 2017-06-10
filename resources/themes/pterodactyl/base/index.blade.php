@@ -52,7 +52,7 @@
                 <table class="table table-hover">
                     <tbody>
                         <tr>
-                            <th>@lang('strings.id')</th>
+                            <th>@lang('strings.username')</th>
                             <th>@lang('strings.name')</th>
                             <th>@lang('strings.node')</th>
                             <th>@lang('strings.connection')</th>
