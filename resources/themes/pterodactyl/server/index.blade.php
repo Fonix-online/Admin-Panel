@@ -47,9 +47,9 @@
                 </div>
             </div>
             <div class="box-footer text-center">
-                @can('power-start', $server)<button class="btn btn-success disabled" data-attr="power" data-action="start">Start</button>@endcan
-                @can('power-restart', $server)<button class="btn btn-primary disabled" data-attr="power" data-action="restart">Restart</button>@endcan
-                @can('power-stop', $server)<button class="btn btn-danger disabled" data-attr="power" data-action="stop">Stop</button>@endcan
+                @can('power-start', $server)<button class="btn btn-success disabled" data-attr="power" data-action="start">Run</button>@endcan
+                @can('power-restart', $server)<button class="btn btn-primary disabled" data-attr="power" data-action="restart">Reboot</button>@endcan
+                @can('power-stop', $server)<button class="btn btn-danger disabled" data-attr="power" data-action="stop">End</button>@endcan
                 @can('power-kill', $server)<button class="btn btn-danger disabled" data-attr="power" data-action="kill">Kill</button>@endcan
             </div>
         </div>
