@@ -82,7 +82,7 @@
             <div class="box-footer">
                 <form action="{{ route('admin.servers.view.delete', $server->id) }}" method="POST">
                     {!! csrf_field() !!}
-                    <button type="submit" class="btn btn-danger">Safely Delete This Server</button>
+                    <button type="submit" class="btn btn-danger">Archive And Delete This Server</button>
                 </form>
             </div>
         </div>
