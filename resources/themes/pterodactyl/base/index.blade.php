@@ -48,36 +48,21 @@
                     </form>
                 </div>
             </div>
-            <div class="box-body table-responsive no-padding">
-                <table class="table table-hover">
-                    <tbody>
-                        <tr>
-                            <th>@lang('strings.name')</th>
-                            <th>@lang('strings.node')</th>
-                            <th>@lang('strings.connection')</th>
-                            <th class="text-center hidden-sm hidden-xs">@lang('strings.memory')</th>
-                            <th class="text-center hidden-sm hidden-xs">@lang('strings.cpu')</th>
-                            <th class="text-center">@lang('strings.status')</th>
-                        </tr>
-                        @foreach($servers as $server)
-                            <tr class="dynamic-update" data-server="{{ $server->uuidShort }}">
-                                <td><a href="{{ route('server.index', $server->uuidShort) }}">{{ $server->name }}</a></td>
-                                <td>@if(Auth::user()->isRootAdmin())<a href="admin/nodes/view/{{ $server->node->id }}">@endif{{ $server->node->name }}</td>
-                                <td><code>{{ $server->allocation->alias }}:{{ $server->allocation->port }}</code></td>
-                                <td class="text-center hidden-sm hidden-xs"><span data-action="memory">--</span> / {{ $server->memory === 0 ? '&infin;' : $server->memory }} MB</td>
-                                <td class="text-center hidden-sm hidden-xs"><span data-action="cpu" data-cpumax="{{ $server->cpu }}">--</span> %</td>
-                                <td class="text-center" data-action="status">
-                                    <span class="label label-default"><i class="fa fa-refresh fa-fw fa-spin"></i></span>
-                                </td>
-                            </tr>
-                            @if (! empty($server->description))
-                                <tr class="server-description">
-                                    <td colspan="7"><p class="text-muted small no-margin">{{ str_limit($server->description, 400) }}</p></td>
-                                </tr>
-                            @endif
-                        @endforeach
-                    </tbody>
-                </table>
+            <div class="col-md-6">
+                <div class="box">
+                    <div class="box-header with-border">
+                      <tr class="dynamic-update" data-server="{{ $server->uuidShort }}">
+                          <td><a href="{{ route('server.index', $server->uuidShort) }}">{{ $server->name }}</a></td>
+                          <td>@if(Auth::user()->isRootAdmin())<a href="admin/nodes/view/{{ $server->node->id }}">@endif{{ $server->node->name }}</td>
+                          <td><code>{{ $server->allocation->alias }}:{{ $server->allocation->port }}</code></td>
+                          <td class="text-center hidden-sm hidden-xs"><span data-action="memory">--</span> / {{ $server->memory === 0 ? '&infin;' : $server->memory }} MB</td>
+                          <td class="text-center hidden-sm hidden-xs"><span data-action="cpu" data-cpumax="{{ $server->cpu }}">--</span> %</td>
+                          <td class="text-center" data-action="status">
+                              <span class="label label-default"><i class="fa fa-refresh fa-fw fa-spin"></i></span>
+                          </td>
+                      </tr>
+                    </div>
+                </div>
             </div>
             @if($servers->hasPages())
                 <div class="box-footer">
