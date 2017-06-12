@@ -59,18 +59,13 @@
                           <td class="text-center hidden-sm hidden-xs"><span data-action="memory">--</span> / {{ $server->memory === 0 ? '&infin;' : $server->memory }} MB</td>
                           <td class="text-center hidden-sm hidden-xs"><span data-action="cpu" data-cpumax="{{ $server->cpu }}">--</span> %</td>
                           <td class="text-center" data-action="status">
-                              <span class="label label-default"><i class="fa fa-refresh fa-fw fa-spin"></i></span>
+                          <span class="label label-default"><i class="fa fa-refresh fa-fw fa-spin"></i></span>
                           </td>
                       </tr>
                     </div>
                 </div>
-                @if (! empty($server->description))
+            @endforeach
             </div>
-            @if($servers->hasPages())
-                <div class="box-footer">
-                    <div class="col-md-12 text-center">{!! $servers->render() !!}</div>
-                </div>
-            @endif
         </div>
     </div>
 </div>
