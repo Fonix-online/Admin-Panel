@@ -71,6 +71,23 @@
         </div>
     </div>
     <div class="col-md-6">
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title">(BETA) Archive and delete the server</h3>
+            </div>
+            <div class="box-body">
+                <p>This action will attempt to delete the server from both the panel and daemon. In the process the data from the server will be sent to the archive directory!</p>
+                <p class="text-danger small">Deleting a server is an irreversible action. <strong>All server data</strong> (including files and users) will be removed from the specified node and moved to the Digital Hazards Cloud!</p>
+            </div>
+            <div class="box-footer">
+                <form action="{{ route('admin.servers.view.delete', $server->id) }}" method="POST">
+                    {!! csrf_field() !!}
+                    <button type="submit" class="btn btn-danger">Safely Delete This Server</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
         <div class="box box-danger">
             <div class="box-header with-border">
                 <h3 class="box-title">Force Delete Server</h3>
