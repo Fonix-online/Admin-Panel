@@ -58,7 +58,7 @@
         <div class="wrapper">
             <header class="main-header">
                 <a href="{{ route('index') }}" class="logo">
-                     <img src="https://i.gyazo.com/959c754207cd40f0c3e04b9775af0904.png" alt="Smiley face" height="36" width="160">
+                     <img src="https://secure.ume.digitalhazards.net/p-logo/SSL-Logo-Ori.png" alt="Smiley face" height="36" width="160">
                 </a>
                 <nav class="navbar navbar-static-top">
                     <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
