@@ -31,9 +31,9 @@
         <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
         <link rel="manifest" href="/favicons/manifest.json">
         <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#bc6e3c">
-        <link href="https://digitalhazards.net/assets/favicon/favicon.ico?29452" rel="icon">
+        <link href="img/favicon.ico?29452" rel="icon">
         <meta name="msapplication-config" content="/favicons/browserconfig.xml">
-        <meta name="theme-color" content="#00A8FF">
+        <meta name="theme-color" content="#A4FD0B">
 
         @include('layouts.scripts')
 
@@ -42,6 +42,7 @@
             {!! Theme::css('vendor/adminlte/admin.min.css') !!}
             {!! Theme::css('vendor/adminlte/colors/skin-blue.min.css') !!}
             {!! Theme::css('vendor/sweetalert/sweetalert.min.css') !!}
+			{!! Theme::css('vendor/bootstrap/bootstrap-table.min.css') !!}
             {!! Theme::css('vendor/animate/animate.min.css') !!}
             {!! Theme::css('css/pterodactyl.css') !!}
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -57,7 +58,7 @@
         <div class="wrapper">
             <header class="main-header">
                 <a href="{{ route('index') }}" class="logo">
-                    <span>{{ Settings::get('company', 'Pterodactyl') }}</span>
+                     <img src="https://i.gyazo.com/959c754207cd40f0c3e04b9775af0904.png" alt="Smiley face" height="36" width="160">
                 </a>
                 <nav class="navbar navbar-static-top">
                     <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
@@ -78,7 +79,7 @@
                                 <a href="#" data-action="control-sidebar" data-toggle="tooltip" data-placement="bottom" title="{{ @trans('strings.servers') }}"><i class="fa fa-server"></i></a>
                             </li>
                             <li>
-                                <a href="mailto:fonix@digitalhazards.net" data-toggle="tooltip" data-placement="bottom" title="Email Fonix"><i class="fa fa-envelope"></i></a>
+                                <a href="mailto:surpport@iskall85.com" data-toggle="tooltip" data-placement="bottom" title="Email Surpport"><i class="fa fa-envelope"></i></a>
                             </li>
                             @if(Auth::user()->isRootAdmin())
                                 <li>
@@ -125,51 +126,82 @@
                             </a>
                         </li>
 
-                        <li class="header">Network Storage</li>
-                        <li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
-                            <a href="http://cloud.digitalhazards.net">
-                                <i class="fa fa-cloud"></i> <span>Cloud Server</span>
-                            </a>
-                        </li>
-                        <li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
-                            <a href="http://solder.digitalhazards.net">
-                                <i class="fa fa-microchip"></i> <span>Solder Page</span>
-                            </a>
-                        </li>
-                        <li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
-                            <a href="http://src.dhmini.xyz">
-                                <i class="fa fa-folder-open"></i> <span>Solder Repo</span>
-                            </a>
-                        </li>
+                                <li class="treeview">
+                                    <a href="#">
+                                        <i class="fa fa-gears"></i>
+                                        <span>Network Storage</span>
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="treeview-menu">
+										<li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
+											<a href="http://cloud.digitalhazards.net">
+											<i class="fa fa-cloud"></i> <span>Cloud Server</span>
+											</a>
+										</li>
+										<li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
+											<a href="http://digitalhazards.net">
+											<i class="fa fa-microchip"></i> <span>Solder Page</span>
+											</a>
+										</li>
+										<li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
+											<a href="http://digitalhazards.net">
+											<i class="fa fa-folder-open"></i> <span>Solder Repo</span>
+											</a>
+										</li>
+                                    </ul>
+                                </li>
 
-                        <li class="header">Network information</li>
-                        <li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
-                            <a href="https://wiki.digitalhazards.net">
-                                <i class="fa fa-info"></i> <span>DH Wiki</span>
-                            </a>
-                        </li>
-                        <li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
-                            <a href="http://status.digitalhazards.net">
-                                <i class="fa fa-stack-exchange"></i> <span>Network Status</span>
-                            </a>
-                        </li>
-                        <li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
-                            <a href="http://structure.digitalhazards.net">
-                                <i class="fa fa-eercast"></i> <span>Network Structure</span>
-                            </a>
-                        </li>
+                                <li class="treeview">
+                                    <a href="#">
+                                        <i class="fa fa-gears"></i>
+                                        <span>Network information</span>
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="treeview-menu">
+										<li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
+											<a href="http://wiki.digitalhazards.net">
+											<i class="fa fa-cloud"></i> <span>Wiki</span>
+											</a>
+										</li>
+										<li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
+											<a href="http://status.digitalhazards.net">
+											<i class="fa fa-microchip"></i> <span>Network Status</span>
+											</a>
+										</li>
+										<li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
+											<a href="http://structure.digitalhazards.net">
+											<i class="fa fa-folder-open"></i> <span>Network Structure</span>
+											</a>
+										</li>
+                                    </ul>
+                                </li>
 
-                        <li class="header">Other Links</li>
-                        <li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
-                            <a href="http://dhmini.xyz">
-                                <i class="fa fa-underline"></i> <span>URL Shortner</span>
-                            </a>
-                        </li>
-                        <li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
-                            <a href="https://mail.digitalhazards.net">
-                                <i class="fa fa-envelope-o"></i> <span>Mail Server</span>
-                            </a>
-                        </li>
+                                <li class="treeview">
+                                    <a href="#">
+                                        <i class="fa fa-gears"></i>
+                                        <span>Other Links</span>
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="treeview-menu">
+										<li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
+											<a href="http://dhmini.xyz">
+											<i class="fa fa-cloud"></i> <span>URL Shortner</span>
+											</a>
+										</li>
+										<li class="{{ Route::currentRouteName() !== 'i1ndex' ?: 'active' }}">
+											<a href="https://mail.digitalhazards.net">
+											<i class="fa fa-microchip"></i> <span>Mail Server</span>
+											</a>
+										</li>
+                                    </ul>
+                                </li>
+
 
                         @if (isset($server->name) && isset($node->name))
                             <li class="header">@lang('navigation.server.header')</li>
@@ -286,7 +318,7 @@
                     <strong><i class="fa fa-fw {{ $appIsGit ? 'fa-git-square' : 'fa-code-fork' }}"></i></strong> {{ $appVersion }}<br />
                     <strong><i class="fa fa-fw fa-clock-o"></i></strong> {{ round(microtime(true) - LARAVEL_START, 3) }}s
                 </div>
-                Copyright &copy; 2015 - {{ date('Y') }} <a href="https://fonix.online">Fonix</a>.
+                Copyright &copy; 2015 - {{ date('Y') }} <a href="https://scaldayt.co.uk">scaldayt</a>.
             </footer>
             <aside class="control-sidebar control-sidebar-dark">
                 <div class="tab-content">
@@ -323,6 +355,7 @@
 
             {!! Theme::js('js/laroute.js') !!}
             {!! Theme::js('vendor/jquery/jquery.min.js') !!}
+			{!! Theme::js('vendor/jquery/bootstrap-table.min.js') !!}
             {!! Theme::js('vendor/sweetalert/sweetalert.min.js') !!}
             {!! Theme::js('vendor/bootstrap/bootstrap.min.js') !!}
             {!! Theme::js('vendor/slimscroll/jquery.slimscroll.min.js') !!}
