@@ -67,7 +67,7 @@
                                 <td><code>{{ $server->allocation->alias }}:{{ $server->allocation->port }}</code></td>
                                 <td class="text-center hidden-sm hidden-xs"><span data-action="memory">--</span> / {{ $server->memory === 0 ? '&infin;' : $server->memory }} MB</td>
                                 <td class="text-center hidden-sm hidden-xs"><span data-action="cpu" data-cpumax="{{ $server->cpu }}">--</span> %</td>
-                                <td class="text-center"><a href="{{ route('admin.users.view', $server->user->id) }}">{{ $server->user->username }}</a></td>
+                                <td class="text-center">if(Auth::user()->isRootAdmin()<a href="{{ route('admin.users.view', $server->user->id) }}">@endif{{ $server->user->username }}</a></td>
                                 <td class="text-center" data-action="status">
                                     <span class="label label-default"><i class="fa fa-refresh fa-fw fa-spin"></i></span>
                                 </td>
