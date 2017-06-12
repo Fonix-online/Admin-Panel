@@ -547,7 +547,8 @@ a:hover, a:active, a:focus {
 	width: auto;
 	height: auto;
 	padding: 0;
-	margin-right: 10px
+	margin-right: 10px;
+	transition: all 0.25s;
 }
 
 .sidebar-menu li>a>.fa-angle-left {
