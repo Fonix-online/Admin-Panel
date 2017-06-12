@@ -70,11 +70,6 @@
                                     <span class="label label-default"><i class="fa fa-refresh fa-fw fa-spin"></i></span>
                                 </td>
                             </tr>
-                            @if (! empty($server->description))
-                                <tr class="server-description">
-                                    <td colspan="7"><p class="text-muted small no-margin">{{ str_limit($server->description, 400) }}</p></td>
-                                </tr>
-                            @endif
                         @endforeach
                     </tbody>
                 </table>
