@@ -49,6 +49,7 @@
                 </div>
             </div>
             <div class="col-md-6">
+              @foreach($servers as $server)
                 <div class="box">
                     <div class="box-header with-border">
                       <tr class="dynamic-update" data-server="{{ $server->uuidShort }}">
@@ -63,6 +64,7 @@
                       </tr>
                     </div>
                 </div>
+                @if (! empty($server->description))
             </div>
             @if($servers->hasPages())
                 <div class="box-footer">
