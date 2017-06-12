@@ -74,11 +74,6 @@
                     </tbody>
                 </table>
             </div>
-            @if($servers->hasPages())
-                <div class="box-footer">
-                    <div class="col-md-12 text-center">{!! $servers->render() !!}</div>
-                </div>
-            @endif
         </div>
     </div>
 </div>
