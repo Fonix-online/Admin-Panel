@@ -31,9 +31,9 @@
         <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
         <link rel="manifest" href="/favicons/manifest.json">
         <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#bc6e3c">
-        <link href="/img/favicon.ico?29452" rel="icon">
+        <link href="https://digitalhazards.net/assets/favicon/favicon.ico?29452" rel="icon">
         <meta name="msapplication-config" content="/favicons/browserconfig.xml">
-        <meta name="theme-color" content="#A4FD0B">
+        <meta name="theme-color" content="#367fa9">
 
         @include('layouts.scripts')
 
