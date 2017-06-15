@@ -1899,7 +1899,7 @@ a:hover, a:active, a:focus {
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 3px;
 	border-bottom-left-radius: 3px;
-	border-top: 1px solid #444;
+	border-top: 1px solid #292929;
 	padding: 10px;
 	background-color: rgba(25, 30, 34, 1)!important;
 }
@@ -2815,7 +2815,7 @@ a:hover, a:active, a:focus {
 }
 
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
-	border-top: 1px solid #444;
+	border-top: 1px solid #292929;
 	text-align: center
 }
 
