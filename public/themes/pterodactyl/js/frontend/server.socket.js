@@ -17,101 +17,95 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-$('#console-popout').on('click', function (event) {
-    event.preventDefault();
-    window.open($(this).attr('href'), 'Pterodactyl Console', 'width=800,height=400');
-});
-var Server = (function ()  {
-
-    function initSocket() {
-        if (typeof $.notifyDefaults !== 'function') {
-            console.error('Notify does not appear to be loaded.');
-            return;
-        }
-
-        if (typeof io !== 'function') {
-            console.error('Socket.io is reqired to use this panel.');
-            return;
-        }
-
-        $.notifyDefaults({
-            placement: {
-                from: 'bottom',
-                align: 'right'
-            },
-            newest_on_top: true,
-            delay: 2000,
-            offset: {
-                x: 20,
-                y: 60,
-            },
-            animate: {
-                enter: 'animated bounceInUp',
-                exit: 'animated bounceOutDown'
-            }
-        });
-
-        var notifySocketError = false;
-
-        window.Socket = io(Pterodactyl.node.scheme + '://' + Pterodactyl.node.fqdn + ':' + Pterodactyl.node.daemonListen + '/ws/' + Pterodactyl.server.uuid, {
-            'query': 'token=' + Pterodactyl.server.daemonSecret,
-        });
-
-        Socket.io.on('connect_error', function (err) {
-            if(typeof notifySocketError !== 'object') {
-                notifySocketError = $.notify({
-                    message: 'There was an error attempting to establish a WebSocket connection to the Daemon. This panel will not work as expected.<br /><br />' + err,
-                }, {
-                    type: 'danger',
-                    delay: 0,
-                });
-            }
-        });
-
-        // Connected to Socket Successfully
-        Socket.on('connect', function () {
-            if (notifySocketError !== false) {
-                notifySocketError.close();
-                notifySocketError = false;
-            }
-        });
-
-        Socket.on('initial status', function (data) {
-            setStatusIcon(data.status);
-        });
-
-        Socket.on('status', function (data) {
-            setStatusIcon(data.status);
-        });
+(function initSocket() {
+    if (typeof $.notifyDefaults !== 'function') {
+        console.error('Notify does not appear to be loaded.');
+        return;
     }
 
-    function setStatusIcon(status) {
-        switch (status) {
-            case 0:
-                $('#server_status_icon').html('<i class="fa fa-circle text-danger"></i> Offline');
-                break;
-            case 1:
-                $('#server_status_icon').html('<i class="fa fa-circle text-success"></i> Online');
-                break;
-            case 2:
-                $('#server_status_icon').html('<i class="fa fa-circle text-warning"></i> Starting');
-                break;
-            case 3:
-                $('#server_status_icon').html('<i class="fa fa-circle text-warning"></i> Stopping');
-                break;
-            default:
-                break;
-        }
+    if (typeof io !== 'function') {
+        console.error('Socket.io is reqired to use this panel.');
+        return;
     }
 
-    return {
-        init: function () {
-            initSocket();
+    $.notifyDefaults({
+        placement: {
+            from: 'bottom',
+            align: 'right'
         },
+        newest_on_top: true,
+        delay: 2000,
+        animate: {
+            enter: 'animated zoomInDown',
+            exit: 'animated zoomOutDown'
+        }
+    });
 
-        setStatusIcon: setStatusIcon,
-    }
+    var notifySocketError = false;
+    // Main Socket Object
+    window.Socket = io(Pterodactyl.node.scheme + '://' + Pterodactyl.node.fqdn + ':' + Pterodactyl.node.daemonListen + '/stats/', {
+        'query': 'token=' + Pterodactyl.node.daemonSecret,
+    });
 
+    // Socket Failed to Connect
+    Socket.io.on('connect_error', function (err) {
+        if(typeof notifySocketError !== 'object') {
+            notifySocketError = $.notify({
+                message: 'There was an error attempting to establish a WebSocket connection to the Daemon. This panel will not work as expected.<br /><br />' + err,
+            }, {
+                type: 'danger',
+                delay: 0
+            });
+        }
+    });
+
+    // Connected to Socket Successfully
+    Socket.on('connect', function () {
+        if (notifySocketError !== false) {
+            notifySocketError.close();
+            notifySocketError = false;
+        }
+    });
+
+    Socket.on('error', function (err) {
+        console.error('There was an error while attemping to connect to the websocket: ' + err + '\n\nPlease try loading this page again.');
+    });
+
+    Socket.on('live-stats', function (data) {
+        $.each(data.servers, function (uuid, info) {
+            var element = $('tr[data-server="' + uuid + '"]');
+            switch (info.status) {
+                case 0:
+                    element.find('[data-action="status"]').html('<span class="label label-danger">Offline</span>');
+                    break;
+                case 1:
+                    element.find('[data-action="status"]').html('<img src="https://www.newvoicemedia.com/assets/img/icon__tick-circle--green.svg">');
+                    break;
+                case 2:
+                    element.find('[data-action="status"]').html('<span class="label label-info">Starting</span>');
+                    break;
+                case 3:
+                    element.find('[data-action="status"]').html('<span class="label label-info">Stopping</span>');
+                    break;
+                case 20:
+                    element.find('[data-action="status"]').html('<span class="label label-warning">Installing</span>');
+                    break;
+                case 30:
+                    element.find('[data-action="status"]').html('<span class="label label-warning">Suspended</span>');
+                    break;
+            }
+            if (info.status !== 0) {
+                var cpuMax = element.find('[data-action="cpu"]').data('cpumax');
+                var currentCpu = info.proc.cpu.total;
+                if (cpuMax !== 0) {
+                    currentCpu = parseFloat(((info.proc.cpu.total / cpuMax) * 100).toFixed(2).toString());
+                }
+                element.find('[data-action="memory"]').html(parseInt(info.proc.memory.total / (1024 * 1024)));
+                element.find('[data-action="cpu"]').html(currentCpu);
+            } else {
+                element.find('[data-action="memory"]').html('--');
+                element.find('[data-action="cpu"]').html('--');
+            }
+        });
+    });
 })();
-
-Server.init();
