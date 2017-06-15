@@ -17,101 +17,73 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-$('#console-popout').on('click', function (event) {
-    event.preventDefault();
-    window.open($(this).attr('href'), 'Pterodactyl Console', 'width=800,height=400');
-});
-var Server = (function ()  {
+(function updateServerStatus() {
+    var Status = {
+        0: 'Offline',
+        1: 'Online',
+        2: 'Starting',
+        3: 'Stopping'
+    };
+    $('.dynamic-update').each(function (index, data) {
+        var element = $(this);
+        var serverShortUUID = $(this).data('server');
 
-    function initSocket() {
-        if (typeof $.notifyDefaults !== 'function') {
-            console.error('Notify does not appear to be loaded.');
-            return;
-        }
-
-        if (typeof io !== 'function') {
-            console.error('Socket.io is reqired to use this panel.');
-            return;
-        }
-
-        $.notifyDefaults({
-            placement: {
-                from: 'bottom',
-                align: 'right'
-            },
-            newest_on_top: true,
-            delay: 2000,
-            offset: {
-                x: 20,
-                y: 60,
-            },
-            animate: {
-                enter: 'animated bounceInUp',
-                exit: 'animated bounceOutDown'
+        $.ajax({
+            type: 'GET',
+            url: Router.route('index.status', { server: serverShortUUID }),
+            timeout: 5000,
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content'),
             }
-        });
-
-        var notifySocketError = false;
-
-        window.Socket = io(Pterodactyl.node.scheme + '://' + Pterodactyl.node.fqdn + ':' + Pterodactyl.node.daemonListen + '/ws/' + Pterodactyl.server.uuid, {
-            'query': 'token=' + Pterodactyl.server.daemonSecret,
-        });
-
-        Socket.io.on('connect_error', function (err) {
-            if(typeof notifySocketError !== 'object') {
-                notifySocketError = $.notify({
-                    message: 'There was an error attempting to establish a WebSocket connection to the Daemon. This panel will not work as expected.<br /><br />' + err,
-                }, {
-                    type: 'danger',
-                    delay: 0,
-                });
+        }).done(function (data) {
+            if (typeof data.status === 'undefined') {
+                element.find('[data-action="status"]').html('<span class="label label-default">Error</span>');
+                return;
             }
-        });
-
-        // Connected to Socket Successfully
-        Socket.on('connect', function () {
-            if (notifySocketError !== false) {
-                notifySocketError.close();
-                notifySocketError = false;
+            switch (data.status) {
+                case 0:
+                    element.find('[data-action="status"]').html('<img src="http://www.iconsdb.com/icons/download/red/circle-256.gif" style="width:22px;height:22px;">');
+                    break;
+                case 1:
+                    element.find('[data-action="status"]').html('<img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Ski_trail_rating_symbol-green_circle.svg" style="width:22px;height:22px;">');
+                    break;
+                case 2:
+                    element.find('[data-action="status"]').html('<img src="https://cdn.shopify.com/s/files/1/0003/9371/t/29/assets/favicon.png?13307845004767453106" style="width:22px;height:22px;">');
+                    break;
+                case 3:
+                    element.find('[data-action="status"]').html('<img src="http://www.iconsdb.com/icons/download/red/circle-256.gif" style="width:22px;height:22px;">');
+                    break;
+                case 20:
+                    element.find('[data-action="status"]').html('<img src="http://www.iconsdb.com/icons/download/red/circle-256.gif" style="width:22px;height:22px;">');
+                    break;
+                case 30:
+                    element.find('[data-action="status"]').html('<img src="https://cdn.shopify.com/s/files/1/0003/9371/t/29/assets/favicon.png?13307845004767453106" style="width:22px;height:22px;">');
+                    break;
             }
+            if (data.status > 0 && data.status < 4) {
+                var cpuMax = element.find('[data-action="cpu"]').data('cpumax');
+                var currentCpu = data.proc.cpu.total;
+                if (cpuMax !== 0) {
+                    currentCpu = parseFloat(((data.proc.cpu.total / cpuMax) * 100).toFixed(2).toString());
+                }
+                if (data.status !== 0) {
+                    var cpuMax = element.find('[data-action="cpu"]').data('cpumax');
+                    var currentCpu = data.proc.cpu.total;
+                    if (cpuMax !== 0) {
+                        currentCpu = parseFloat(((data.proc.cpu.total / cpuMax) * 100).toFixed(2).toString());
+                    }
+                    element.find('[data-action="memory"]').html(parseInt(data.proc.memory.total / (1024 * 1024)));
+                    element.find('[data-action="cpu"]').html(currentCpu);
+                } else {
+                    element.find('[data-action="memory"]').html('--');
+                    element.find('[data-action="cpu"]').html('--');
+                }
+            }
+        }).fail(function (jqXHR) {
+            console.error(jqXHR);
+            element.find('[data-action="status"]').html('<span class="label label-default">Error</span>');
         });
-
-        Socket.on('initial status', function (data) {
-            setStatusIcon(data.status);
-        });
-
-        Socket.on('status', function (data) {
-            setStatusIcon(data.status);
-        });
-    }
-
-    function setStatusIcon(status) {
-        switch (status) {
-            case 0:
-                $('#server_status_icon').html('<i class="fa fa-circle text-danger"></i> Offline');
-                break;
-            case 1:
-                $('#server_status_icon').html('<i class="fa fa-circle text-success"></i> Online');
-                break;
-            case 2:
-                $('#server_status_icon').html('<i class="fa fa-circle text-warning"></i> Starting');
-                break;
-            case 3:
-                $('#server_status_icon').html('<i class="fa fa-circle text-warning"></i> Stopping');
-                break;
-            default:
-                break;
-        }
-    }
-
-    return {
-        init: function () {
-            initSocket();
-        },
-
-        setStatusIcon: setStatusIcon,
-    }
-
+    }).promise().done(function () {
+        setTimeout(updateServerStatus, 10000);
+    });
 })();
-
-Server.init();
