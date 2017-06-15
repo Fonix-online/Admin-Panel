@@ -311,10 +311,11 @@ a:hover, a:active, a:focus {
 }
 
 .content-header>h1>small {
-    font-size: 10px;
-    display: inline-block;
-    padding-left: 20px;
-    font-weight: 500;
+	font-size: 12px;
+	display: inline-block;
+	padding-left: 20px;
+	font-weight: 500;
+	color: #ffffff;
 }
 
 .content-header>.breadcrumb {
