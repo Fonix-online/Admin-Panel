@@ -42,22 +42,22 @@
             }
             switch (data.status) {
                 case 0:
-                    element.find('[data-action="status"]').html('<img src="http://www.iconsdb.com/icons/download/red/circle-256.gif" style="width:22px;height:22px;">');
+                    element.find('[data-action="status"]').html('<span class="label label-danger">Offline</span>');
                     break;
                 case 1:
-                    element.find('[data-action="status"]').html('<img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Ski_trail_rating_symbol-green_circle.svg" style="width:22px;height:22px;">');
+                    element.find('[data-action="status"]').html('<span class="label label-success">Online</span>');
                     break;
                 case 2:
-                    element.find('[data-action="status"]').html('<img src="https://cdn.shopify.com/s/files/1/0003/9371/t/29/assets/favicon.png?13307845004767453106" style="width:22px;height:22px;">');
+                    element.find('[data-action="status"]').html('<span class="label label-info">Starting</span>');
                     break;
                 case 3:
-                    element.find('[data-action="status"]').html('<img src="http://www.iconsdb.com/icons/download/red/circle-256.gif" style="width:22px;height:22px;">');
+                    element.find('[data-action="status"]').html('<span class="label label-info">Stopping</span>');
                     break;
                 case 20:
-                    element.find('[data-action="status"]').html('<img src="http://www.iconsdb.com/icons/download/red/circle-256.gif" style="width:22px;height:22px;">');
+                    element.find('[data-action="status"]').html('<span class="label label-warning">Installing</span>');
                     break;
                 case 30:
-                    element.find('[data-action="status"]').html('<img src="https://cdn.shopify.com/s/files/1/0003/9371/t/29/assets/favicon.png?13307845004767453106" style="width:22px;height:22px;">');
+                    element.find('[data-action="status"]').html('<span class="label label-warning">Suspended</span>');
                     break;
             }
             if (data.status > 0 && data.status < 4) {
