@@ -79,7 +79,7 @@
                     element.find('[data-action="status"]').html('<span class="label label-danger">Offline</span>');
                     break;
                 case 1:
-                    element.find('[data-action="status"]').html('<span class="label label-success">Online</span>');
+                    element.find('[data-action="status"]').html('<img src="https://www.newvoicemedia.com/assets/img/icon__tick-circle--green.svg">');
                     break;
                 case 2:
                     element.find('[data-action="status"]').html('<span class="label label-info">Starting</span>');
