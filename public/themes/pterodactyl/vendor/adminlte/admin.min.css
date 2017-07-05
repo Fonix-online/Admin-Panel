@@ -922,11 +922,11 @@ a:hover, a:active, a:focus {
 
 .control-sidebar-light .nav-tabs.control-sidebar-tabs>li.active>a, .control-sidebar-light .nav-tabs.control-sidebar-tabs>li.active>a:hover, .control-sidebar-light .nav-tabs.control-sidebar-tabs>li.active>a:focus, .control-sidebar-light .nav-tabs.control-sidebar-tabs>li.active>a:active {
 	background: #f9fafc;
-	color: #232c33!important
+	color: #4a4a4a!important
 }
 
 .control-sidebar-light .control-sidebar-heading, .control-sidebar-light .control-sidebar-subheading {
-	color: #232c33!important
+	color: #4a4a4a!important
 }
 
 .control-sidebar-light .control-sidebar-menu {
@@ -4604,7 +4604,7 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 .bg-black {
-	background-color: #232c33!important !important
+	background-color: #4a4a4a!important !important
 }
 
 .bg-red, .callout.callout-danger, .alert-danger, .alert-error, .label-danger, .modal-danger .modal-body {
@@ -4750,7 +4750,7 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 .text-black {
-	color: #232c33!important !important
+	color: #4a4a4a!important !important
 }
 
 .text-light-blue {
@@ -4946,12 +4946,12 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 .bg-black-gradient {
-	background: #232c33!important !important;
-	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #232c33!important), color-stop(1, #2b2b2b)) !important;
-	background: -ms-linear-gradient(bottom, #232c33!important, #2b2b2b) !important;
-	background: -moz-linear-gradient(center bottom, #232c33!important 0, #2b2b2b 100%) !important;
-	background: -o-linear-gradient(#2b2b2b, #232c33!important) !important;
-	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#2b2b2b', endColorstr='#232c33!important111', GradientType=0) !important;
+	background: #4a4a4a!important !important;
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #4a4a4a!important), color-stop(1, #2b2b2b)) !important;
+	background: -ms-linear-gradient(bottom, #4a4a4a!important, #2b2b2b) !important;
+	background: -moz-linear-gradient(center bottom, #4a4a4a!important 0, #2b2b2b 100%) !important;
+	background: -o-linear-gradient(#2b2b2b, #4a4a4a!important) !important;
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#2b2b2b', endColorstr='#4a4a4a!important111', GradientType=0) !important;
 	color: #fff
 }
 
