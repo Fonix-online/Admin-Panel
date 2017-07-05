@@ -31,7 +31,7 @@
         <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
         <link rel="manifest" href="/favicons/manifest.json">
         <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#bc6e3c">
-        <link href="https://digitalhazards.net/assets/favicon/favicon.ico?29452" rel="icon">
+        <link href="https://fonix.online/favicons/favicon.ico" rel="icon">
         <meta name="msapplication-config" content="/favicons/browserconfig.xml">
         <meta name="theme-color" content="#367fa9">
 
@@ -58,7 +58,7 @@
         <div class="wrapper">
             <header class="main-header">
                 <a href="{{ route('index') }}" class="logo">
-                     <img src="https://secure.ume.digitalhazards.net/p-logo/SSL-Logo-Ori.png" alt="Smiley face" height="26" width="190">
+                     <img src="https://fonix.online/repo/img/full-logo.png" alt="Smiley face" height="26" width="190">
                 </a>
                 <nav class="navbar navbar-static-top">
                     <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
