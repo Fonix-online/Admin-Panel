@@ -144,7 +144,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 a {
-	color: #00A8ff
+	color: #ffb200
 }
 
 a:hover, a:active, a:focus {
@@ -955,7 +955,7 @@ a:hover, a:active, a:focus {
 }
 
 .dropdown-menu>li>a:hover {
-	color: #00A8FF;
+	color: #ffb200;
 }
 
 .dropdown-menu>.divider {
@@ -1291,7 +1291,7 @@ a:hover, a:active, a:focus {
 }
 
 .form-control:focus {
-	border-color: #00A8ff;
+	border-color: #ffb200;
 	box-shadow: none
 }
 
@@ -1443,7 +1443,7 @@ a:hover, a:active, a:focus {
 }
 
 .progress-bar-light-blue, .progress-bar-primary {
-	background-color: #00A8ff
+	background-color: #ffb200
 }
 
 .progress-striped .progress-bar-light-blue, .progress-striped .progress-bar-primary {
@@ -1581,14 +1581,14 @@ a:hover, a:active, a:focus {
 	position: relative;
 	border-radius: 3px;
 	background: rgba(8, 8, 8, 0.75)!important;;
-	border-top: 3px solid #00A8ff;
+	border-top: 3px solid #ffb200;
 	margin-bottom: 20px;
 	width: 100%;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1)
 }
 
 .box.box-primary {
-	border-top-color: #00A8ff
+	border-top-color: #ffb200
 }
 
 .box.box-info {
@@ -1664,13 +1664,13 @@ a:hover, a:active, a:focus {
 }
 
 .box.box-solid.box-primary {
-	border: 1px solid #00A8ff
+	border: 1px solid #ffb200
 }
 
 .box.box-solid.box-primary>.box-header {
 	color: #fff;
-	background: #00A8ff;
-	background-color: #00A8ff
+	background: #ffb200;
+	background-color: #ffb200
 }
 
 .box.box-solid.box-primary>.box-header a, .box.box-solid.box-primary>.box-header .btn {
@@ -2041,7 +2041,7 @@ a:hover, a:active, a:focus {
 }
 
 .todo-list .primary {
-	border-left-color: #00A8ff
+	border-left-color: #ffb200
 }
 
 .todo-list .handle {
@@ -2373,7 +2373,7 @@ a:hover, a:active, a:focus {
 }
 
 .btn-primary {
-	background-color: #00A8ff;
+	background-color: #ffb200;
 	border-color: #367fa9
 }
 
@@ -2584,7 +2584,7 @@ a:hover, a:active, a:focus {
 }
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
-	border-top-color: #00A8ff
+	border-top-color: #ffb200
 }
 
 .nav-pills>li.active>a {
@@ -2602,7 +2602,7 @@ a:hover, a:active, a:focus {
 	background: transparent;
 	color: #fff;
 	border-top: 0;
-	border-left-color: #00A8ff
+	border-left-color: #ffb200
 }
 
 .nav-stacked>li.header {
@@ -2656,7 +2656,7 @@ a:hover, a:active, a:focus {
 }
 
 .nav-tabs-custom>.nav-tabs>li.active {
-	border-top-color: #00A8ff
+	border-top-color: #ffb200
 }
 
 .nav-tabs-custom>.nav-tabs>li.active>a, .nav-tabs-custom>.nav-tabs>li.active:hover>a {
@@ -2723,7 +2723,7 @@ a:hover, a:active, a:focus {
 }
 
 .nav-tabs-custom.tab-primary>.nav-tabs>li.active {
-	border-top-color: #00A8ff
+	border-top-color: #ffb200
 }
 
 .nav-tabs-custom.tab-info>.nav-tabs>li.active {
@@ -3062,13 +3062,13 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 .direct-chat-primary .right>.direct-chat-text {
-	background: #00A8ff;
-	border-color: #00A8ff;
+	background: #ffb200;
+	border-color: #ffb200;
 	color: #fff
 }
 
 .direct-chat-primary .right>.direct-chat-text:after, .direct-chat-primary .right>.direct-chat-text:before {
-	border-left-color: #00A8ff
+	border-left-color: #ffb200
 }
 
 .direct-chat-warning .right>.direct-chat-text {
@@ -3444,7 +3444,7 @@ table.text-center, table.text-center td, table.text-center th {
 	color: #fff;
 	border-style: solid;
 	border-width: 2px;
-	border-color: #00A8ff;
+	border-color: #ffb200;
 }
 
 .login-box-body .form-control-feedback, .register-box-body .form-control-feedback {
@@ -4451,7 +4451,7 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 .select2-container--default.select2-container--open {
-	border-color: #00A8ff
+	border-color: #ffb200
 }
 
 .select2-dropdown {
@@ -4460,7 +4460,7 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-	background-color: #00A8ff;
+	background-color: #ffb200;
 	color: white
 }
 
@@ -4497,7 +4497,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .select2-dropdown .select2-search__field:focus, .select2-search--inline .select2-search__field:focus {
 	outline: none;
-	border: 1px solid #00A8ff
+	border: 1px solid #ffb200
 }
 
 .select2-container--default .select2-results__option[aria-disabled=true] {
@@ -4518,7 +4518,7 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 .select2-container--default .select2-selection--multiple:focus {
-	border-color: #00A8ff
+	border-color: #ffb200
 }
 
 .select2-container--default.select2-container--focus .select2-selection--multiple {
@@ -4526,7 +4526,7 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
-	background-color: #00A8ff;
+	background-color: #ffb200;
 	border-color: #367fa9;
 	padding: 1px 10px;
 	color: #fff
@@ -4624,7 +4624,7 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 .bg-light-blue, .label-primary, .modal-primary .modal-body {
-	background-color: #00A8ff !important
+	background-color: #ffb200 !important
 }
 
 .bg-green, .callout.callout-success, .alert-success, .label-success, .modal-success .modal-body {
@@ -4754,7 +4754,7 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 .text-light-blue {
-	color: #00A8ff !important
+	color: #ffb200 !important
 }
 
 .text-green {
@@ -4876,12 +4876,12 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 .bg-light-blue-gradient {
-	background: #00A8ff !important;
-	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #00A8ff), color-stop(1, #67a8ce)) !important;
-	background: -ms-linear-gradient(bottom, #00A8ff, #67a8ce) !important;
-	background: -moz-linear-gradient(center bottom, #00A8ff 0, #67a8ce 100%) !important;
-	background: -o-linear-gradient(#67a8ce, #00A8ff) !important;
-	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#67a8ce', endColorstr='#00A8ff', GradientType=0) !important;
+	background: #ffb200 !important;
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ffb200), color-stop(1, #67a8ce)) !important;
+	background: -ms-linear-gradient(bottom, #ffb200, #67a8ce) !important;
+	background: -moz-linear-gradient(center bottom, #ffb200 0, #67a8ce 100%) !important;
+	background: -o-linear-gradient(#67a8ce, #ffb200) !important;
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#67a8ce', endColorstr='#ffb200', GradientType=0) !important;
 	color: #fff
 }
 
