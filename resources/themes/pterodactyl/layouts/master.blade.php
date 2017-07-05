@@ -58,7 +58,7 @@
         <div class="wrapper">
             <header class="main-header">
                 <a href="{{ route('index') }}" class="logo">
-                     <img src="https://fonix.online/repo/img/full-logo.png" alt="Smiley face" height="40" width="210">
+                     <img src="https://fonix.online/repo/img/full-logo.png" alt="Smiley face" height="50" width="210">
                 </a>
                 <nav class="navbar navbar-static-top">
                     <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
