@@ -1,5 +1,5 @@
 .skin-blue .main-header .navbar {
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 .skin-blue .main-header .navbar .nav>li>a {
 	color: #fff
@@ -31,11 +31,11 @@
 		color: #fff
 	}
 	.skin-blue .main-header .navbar .dropdown-menu li a:hover {
-		background: rgb(8, 8, 8)!important;
+		background: rgba(8, 8, 8, 0.75)!important;
 	}
 }
 .skin-blue .main-header .logo {
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 	;
 	color: #fff;
 	border-bottom: 0 solid transparent
@@ -44,13 +44,13 @@
 	background-color: #00A8ff
 }
 .skin-blue .main-header li.user-header {
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 .skin-blue .content-header {
 	background: transparent
 }
 .skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side {
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 .skin-blue .user-panel>.info, .skin-blue .user-panel>.info>a {
 	color: #fff
@@ -65,7 +65,7 @@
 .skin-blue .sidebar-menu>li:hover>a, .skin-blue .sidebar-menu>li.active>a {
 	color: #fff;
 	background: #0d4673;
-	border-left-color: rgb(8, 8, 8)!important;
+	border-left-color: rgba(8, 8, 8, 0.75)!important;
   transition: all 0.25s;
 }
 .skin-blue .sidebar-menu>li>.treeview-menu {
@@ -117,7 +117,7 @@
 	border-bottom-left-radius: 0
 }
 .skin-blue.layout-top-nav .main-header>.logo {
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 	;
 	color: #fff;
 	border-bottom: 0 solid transparent

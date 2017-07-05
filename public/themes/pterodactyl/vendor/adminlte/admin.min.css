@@ -94,7 +94,7 @@ body {
 }
 
 .main-footer {
-	background: rgb(8, 8, 8)!important;;
+	background: rgba(8, 8, 8, 0.75)!important;;
 	padding: 15px;
 	color: #fff;
 	border-top: 1px solid #d2d6de
@@ -352,7 +352,7 @@ a:hover, a:active, a:focus {
 		top: 0;
 		right: 0;
 		float: none;
-		background: rgb(8, 8, 8)!important;;
+		background: rgba(8, 8, 8, 0.75)!important;;
 		padding-left: 15px
 	}
 	.content-header>.breadcrumb li:before {
@@ -851,7 +851,7 @@ a:hover, a:active, a:focus {
 }
 
 .control-sidebar-dark, .control-sidebar-dark+.control-sidebar-bg {
-	background: rgb(8, 8, 8)!important;
+	background: rgba(8, 8, 8, 0.75)!important;
 }
 
 .control-sidebar-dark .nav-tabs.control-sidebar-tabs {
@@ -877,7 +877,7 @@ a:hover, a:active, a:focus {
 }
 
 .control-sidebar-dark .nav-tabs.control-sidebar-tabs>li.active>a, .control-sidebar-dark .nav-tabs.control-sidebar-tabs>li.active>a:hover, .control-sidebar-dark .nav-tabs.control-sidebar-tabs>li.active>a:focus, .control-sidebar-dark .nav-tabs.control-sidebar-tabs>li.active>a:active {
-	background: rgb(8, 8, 8)!important;;
+	background: rgba(8, 8, 8, 0.75)!important;;
 	color: #fff
 }
 
@@ -978,7 +978,7 @@ a:hover, a:active, a:focus {
 	border-top-right-radius: 4px;
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
-	background-color: rgb(8, 8, 8)!important;fff;
+	background-color: rgba(8, 8, 8, 0.75)!important;fff;
 	padding: 7px 10px;
 	border-bottom: 1px solid #444;
 	color: #fff444;
@@ -991,7 +991,7 @@ a:hover, a:active, a:focus {
 	border-bottom-right-radius: 4px;
 	border-bottom-left-radius: 4px;
 	font-size: 12px;
-	background-color: rgb(8, 8, 8)!important;;
+	background-color: rgba(8, 8, 8, 0.75)!important;;
 	padding: 7px 10px;
 	border-bottom: 1px solid #eeeeee;
 	color: #fff !important;
@@ -1348,7 +1348,7 @@ a:hover, a:active, a:focus {
 .input-group .input-group-addon {
 	border-radius: 0;
 	border-color: #d2d6de;
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 
 .btn-group-vertical .btn.btn-flat:first-of-type, .btn-group-vertical .btn.btn-flat:last-of-type {
@@ -1580,7 +1580,7 @@ a:hover, a:active, a:focus {
 .box {
 	position: relative;
 	border-radius: 3px;
-	background: rgb(8, 8, 8)!important;;
+	background: rgba(8, 8, 8, 0.75)!important;;
 	border-top: 3px solid #00A8ff;
 	margin-bottom: 20px;
 	width: 100%;
@@ -1748,7 +1748,7 @@ a:hover, a:active, a:focus {
 
 .box .knob-label {
 	text-align: center;
-	color: rgb(8, 8, 8)!important;;
+	color: rgba(8, 8, 8, 0.75)!important;;
 	font-weight: 100;
 	font-size: 12px;
 	margin-bottom: 0.3em
@@ -1901,7 +1901,7 @@ a:hover, a:active, a:focus {
 	border-bottom-left-radius: 3px;
 	border-top: 1px solid #292929;
 	padding: 10px;
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 
 .chart-legend {
@@ -2133,7 +2133,7 @@ a:hover, a:active, a:focus {
 .info-box {
 	display: block;
 	min-height: 90px;
-	background: rgb(8, 8, 8)!important;;
+	background: rgba(8, 8, 8, 0.75)!important;;
 	width: 100%;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 	border-radius: 2px;
@@ -2247,7 +2247,7 @@ a:hover, a:active, a:focus {
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 	border-radius: 3px;
 	margin-top: 0;
-	background: rgb(8, 8, 8)!important;;
+	background: rgba(8, 8, 8, 0.75)!important;;
 	color: #fff;
 	margin-left: 60px;
 	margin-right: 15px;
@@ -2297,7 +2297,7 @@ a:hover, a:active, a:focus {
 	font-weight: 600;
 	padding: 5px;
 	display: inline-block;
-	background-color: rgb(8, 8, 8)!important;;
+	background-color: rgba(8, 8, 8, 0.75)!important;;
 	border-radius: 4px
 }
 
@@ -2363,7 +2363,7 @@ a:hover, a:active, a:focus {
 }
 
 .btn-default {
-	background-color: rgb(8, 8, 8)!important;;
+	background-color: rgba(8, 8, 8, 0.75)!important;;
 	color: #fff;
 	border-color: #ddd
 }
@@ -2450,7 +2450,7 @@ a:hover, a:active, a:focus {
 	text-align: center;
 	color: #666;
 	border: 1px solid #ddd;
-	background-color: rgb(8, 8, 8)!important;;
+	background-color: rgba(8, 8, 8, 0.75)!important;;
 	font-size: 12px
 }
 
@@ -2505,7 +2505,7 @@ a:hover, a:active, a:focus {
 }
 
 .callout code, .callout .highlight {
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 
 .callout.callout-danger {
@@ -2615,7 +2615,7 @@ a:hover, a:active, a:focus {
 
 .nav-tabs-custom {
 	margin-bottom: 20px;
-	background: rgb(8, 8, 8)!important;;
+	background: rgba(8, 8, 8, 0.75)!important;;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 	border-radius: 3px
 }
@@ -2660,7 +2660,7 @@ a:hover, a:active, a:focus {
 }
 
 .nav-tabs-custom>.nav-tabs>li.active>a, .nav-tabs-custom>.nav-tabs>li.active:hover>a {
-	background-color: rgb(8, 8, 8)!important;;
+	background-color: rgba(8, 8, 8, 0.75)!important;;
 	color: #fff
 }
 
@@ -2711,7 +2711,7 @@ a:hover, a:active, a:focus {
 }
 
 .nav-tabs-custom>.tab-content {
-	background: rgb(8, 8, 8)!important;;
+	background: rgba(8, 8, 8, 0.75)!important;;
 	padding: 10px;
 	border-bottom-right-radius: 3px;
 	border-bottom-left-radius: 3px
@@ -2856,7 +2856,7 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 .label-default {
-	background-color: rgb(8, 8, 8)!important;;
+	background-color: rgba(8, 8, 8, 0.75)!important;;
 	color: #fff
 }
 
@@ -2995,7 +2995,7 @@ table.text-center, table.text-center td, table.text-center th {
 	bottom: 0;
 	height: 250px;
 	width: 100%;
-	background: rgb(8, 8, 8)!important;;
+	background: rgba(8, 8, 8, 0.75)!important;;
 	color: #fff;
 	overflow: auto
 }
@@ -3370,7 +3370,7 @@ table.text-center, table.text-center td, table.text-center th {
 .lockscreen-item {
 	border-radius: 4px;
 	padding: 0;
-	background: rgb(8, 8, 8)!important;;
+	background: rgba(8, 8, 8, 0.75)!important;;
 	position: relative;
 	margin: 10px auto 30px auto;
 	width: 290px
@@ -3381,7 +3381,7 @@ table.text-center, table.text-center td, table.text-center th {
 	position: absolute;
 	left: -10px;
 	top: -25px;
-	background: rgb(8, 8, 8)!important;;
+	background: rgba(8, 8, 8, 0.75)!important;;
 	padding: 5px;
 	z-index: 10
 }
@@ -3401,7 +3401,7 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 .lockscreen-credentials .btn {
-	background-color: rgb(8, 8, 8)!important;;
+	background-color: rgba(8, 8, 8, 0.75)!important;;
 	border: 0;
 	padding: 0 10px
 }
@@ -3509,7 +3509,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .invoice {
 	position: relative;
-	background: rgb(8, 8, 8)!important;;
+	background: rgba(8, 8, 8, 0.75)!important;;
 	border: 1px solid #444;
 	padding: 20px;
 	margin: 10px 25px
@@ -3710,7 +3710,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-adn .badge {
 	color: #d87a68;
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 
 .btn-bitbucket {
@@ -3743,7 +3743,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-bitbucket .badge {
 	color: #205081;
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 
 .btn-dropbox {
@@ -3776,7 +3776,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-dropbox .badge {
 	color: #1087dd;
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 
 .btn-facebook {
@@ -3809,7 +3809,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-facebook .badge {
 	color: #3b5998;
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 
 .btn-flickr {
@@ -3871,12 +3871,12 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-foursquare .badge {
 	color: #f94877;
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 
 .btn-github {
 	color: #fff;
-	background-color: rgb(8, 8, 8)!important;;
+	background-color: rgba(8, 8, 8, 0.75)!important;;
 	border-color: rgba(0, 0, 0, 0.2)
 }
 
@@ -3904,7 +3904,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-github .badge {
 	color: #fff;
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 
 .btn-google {
@@ -3937,7 +3937,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-google .badge {
 	color: #dd4b39;
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 
 .btn-instagram {
@@ -3970,7 +3970,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-instagram .badge {
 	color: #3f729b;
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 
 .btn-linkedin {
@@ -4003,7 +4003,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-linkedin .badge {
 	color: #007bb6;
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 
 .btn-microsoft {
@@ -4036,7 +4036,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-microsoft .badge {
 	color: #2672ec;
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 
 .btn-openid {
@@ -4069,7 +4069,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-openid .badge {
 	color: #f7931e;
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 
 .btn-pinterest {
@@ -4102,7 +4102,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-pinterest .badge {
 	color: #cb2027;
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 
 .btn-reddit {
@@ -4168,7 +4168,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-soundcloud .badge {
 	color: #f50;
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 
 .btn-tumblr {
@@ -4201,7 +4201,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-tumblr .badge {
 	color: #2c4762;
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 
 .btn-twitter {
@@ -4234,7 +4234,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-twitter .badge {
 	color: #55acee;
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 
 .btn-vimeo {
@@ -4267,7 +4267,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-vimeo .badge {
 	color: #1ab7ea;
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 
 .btn-vk {
@@ -4300,7 +4300,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-vk .badge {
 	color: #587ea3;
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 
 .btn-yahoo {
@@ -4333,7 +4333,7 @@ table.text-center, table.text-center td, table.text-center th {
 
 .btn-yahoo .badge {
 	color: #720e9e;
-	background-color: rgb(8, 8, 8)!important;
+	background-color: rgba(8, 8, 8, 0.75)!important;
 }
 
 .fc-button {
@@ -4996,7 +4996,7 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 .list-link>a:hover {
-	color: rgb(8, 8, 8)!important;
+	color: rgba(8, 8, 8, 0.75)!important;
 }
 
 .font-light {
