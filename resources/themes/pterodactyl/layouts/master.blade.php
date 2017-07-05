@@ -33,7 +33,7 @@
         <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#bc6e3c">
         <link href="https://fonix.online/favicons/favicon.ico" rel="icon">
         <meta name="msapplication-config" content="/favicons/browserconfig.xml">
-        <meta name="theme-color" content="#367fa9">
+        <meta name="theme-color" content="#af7a00">
 
         @include('layouts.scripts')
 
